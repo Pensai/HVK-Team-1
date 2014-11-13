@@ -3,13 +3,6 @@ body{
 	font-family:Verdana, Geneva, sans-serif;
 }
 
-#banner{
-	background-color: #B6C0D8;
-	margin-top:-1em;
-	margin-left:-1em;
-	width: 100%;
-}
-
 #search{
 	margin-left:1.5em;
 	margin-top:1em;
@@ -63,6 +56,6 @@ ul.MenuBarHorizontal a{
 
 ul.MenuBarHorizontal a:hover, ul.MenuBarHorizontal a:focus
 {
-	background-color: #5573B8;
+	background-color: #00B4FF;
 	color: #FFF;
 }
