@@ -17,12 +17,16 @@
 			collapsible: true,
 			active: false
 		});
+
+        $("#accord").accordion({
+            collapsible: true,
+            active: false
+        });
 	}
 </script>
 </head>
 
 <body onLoad="accord()">
-<div id="banner" style="text-align:center"><img src="styles/logo.png" width="500" height="250" alt="HVK logo"></div>
     <ul id="MenuBar1" class="MenuBarHorizontal">
       <li id="item1"><a href="login.html">Home</a></li>
       <li id="item2"><a href="#">Info</a></li>
@@ -30,18 +34,18 @@
     </ul><br/><br/>
     
     <div id="content">
-    	<h1 style="text-align:center; padding-top:0.5em;">Welcome to Happy Valley Kennels</h1>
+    	<h2 style="text-align:center; padding-top:0.5em;">Welcome to Happy Valley Kennels</h2>
     	<div style="padding-left:1.5em;">
         	<strong>Name:</strong> Jim Bob<br/>
             <strong>Address:</strong> 133 Main St., Ottawa, ON, L7N1C1<br/>
             <strong>Phone:</strong> 613-555-1234
         </div>
         
-        <div id="reservations">
+        <div id="reservations" style="margin-bottom:1em;">
         	<h2>Current Reservations:</h2>
             
             <div id="accordion">
-            	<h3>Start Date: 31/10/2014</h3>
+            	<h3>Start Date: 31/10/2014 <span style="border-left:thin solid black; padding-left:0.5em"><input type="button" value="Edit"/></span></h3>
                 <div>
                 	<p>End Date: 14/11/2014<br/>
                     <strong>Pet(s):</strong>
@@ -52,12 +56,11 @@
                     </p>
                     
                     <form action="#" method="get">
-                    	<input type="submit" value="Edit"/>
                         <input type="submit" value="Delete"/>
                     </form>
                 </div>
                 
-                <h3>Start Date: 04/02/2015</h3>
+                <h3>Start Date: 04/02/2015 <span style="border-left:thin solid black; padding-left:0.5em"><input type="button" value="Edit"/></span></h3>
                 <div>
                 	<p>End Date: 28/03/2015<br/>
                     <strong>Pet(s):</strong>
@@ -68,18 +71,106 @@
                     </p>
                     
                     <form action="#" method="get">
-                    	<input type="submit" value="Edit"/>
                         <input type="submit" value="Delete"/>
                     </form>
                 </div>
             </div>
         </div>
-        <form id="actions" action="makeReservation.html" method="get">
-        	<input type="submit" value="Make Reservation"/><br/>
-			<input type="submit" value="My Account"/><br/>
+
+        <h3 style="margin-left:1em;">My Pets</h3>
+        <div id="accord" style="margin-left:1em; margin-right:1.2em; margin-bottom:1em;">
+            <h3>Fluffy</h3>
+                <p>
+                <span style="display:block; width:15em; float:left;">
+                    <span class="nameAlign"><strong>Name:</strong></span> Fluffy<br/>
+                    <span class="nameAlign"><strong>Pet Type:</strong></span> Dog<br/>
+                    <span class="nameAlign"><strong>Fixed:</strong></span> Yes<br/>
+                    <span class="nameAlign"><strong>Birth date:</strong></span> 10/31/2010<br/>
+                    <span class="nameAlign"><strong>Size:</strong></span> Small<br/>
+                    <span class="nameAlign"><strong>Food:</strong></span> Pedigree<br/>
+                    <br/>
+                    <strong style="font-size:22px">Vaccinations</strong><br/>
+                    <span class="vaccAlign">Bordetella:</span> 05/15/2017<br/>
+                    <span class="vaccAlign">Distemper:</span> 01/02/2016<br/>
+                    <span class="vaccAlign">Hepatitis:</span> 03/15/2016<br/>
+                    <span class="vaccAlign">Parainfuenza:</span> 03/20/2015<br/>
+                    <span class="vaccAlign">Parvovirus:</span> 31/12/2014<br/>
+                    <span class="vaccAlign">Rabies:</span> 01/01/2016<br/>
+                </span>
+                <span style="display:block; width:15em; float:right;">
+                    <strong style="font-size:22px">Vet Information</strong><br/>
+                    <strong>Name:</strong> Dr. Jimmy John<br/>
+                    <strong>Phone:</strong> 613-321-5522<br/>
+                    
+                    <span style="display:block; margin-top:12.5em;">
+                        <input type="button" value="Edit"/>
+                        <a id="delPet" href="#" style="border-left:thin solid black; text-decoration:none;">Delete Pet</a>
+                    </span>
+                </span>
+                </p>
+                <h3>New Pet</h3>
+                <form action="#" method="get">
+                    <label class="lblAlign">Name:</label>
+                    <input type="text"/><br/>
+                    
+                    <label class="lblAlign">Pet Type:</label>
+                    <select>
+                        <option>Dog</option>
+                        <option>Cat</option>
+                    </select><br/>
+                    
+                    <label class="lblAlign">Fixed:</label>
+                    <input type="checkbox"/><br/>
+                    
+                    <label class="lblAlign">Birth Date:</label>
+                    <input type="text" class="date" size="10"/><br/>
+                    
+                    <label class="lblAlign">Size:</label>
+                    <select>
+                        <option>Small</option>
+                        <option>Medium</option>
+                        <option>Large</option>
+                    </select><br/>
+                    
+                    <label class="lblAlign">Food:</label>
+                    <input type="text"/><br/>
+                    
+                    <strong style="font-size:22px">Vaccinations</strong><br/>
+                    
+                    <label class="lblAlign">Bordetella:</label>
+                    <input type="text" class="date" size="10"/></br>
+                    
+                    <label class="lblAlign">Distemper:</label>
+                    <input type="text" class="date" size="10"/></br>
+                    
+                    <label class="lblAlign">Hepatitis:</label>
+                    <input type="text" class="date" size="10"/></br>
+                    
+                    <label class="lblAlign">Parainfuenza:</label>
+                    <input type="text" class="date" size="10"/></br>
+                    
+                    <label class="lblAlign">Parvovirus:</label>
+                    <input type="text" class="date" size="10"/></br>
+                    
+                    <label class="lblAlign">Rabies:</label>
+                    <input type="text" class="date" size="10"/></br>
+                    
+                    <strong style="font-size:22px">Vet Information</strong><br/>
+                    <label class="lblAlign">Name:</label>
+                    <input type="text"/><br/>
+                    
+                    <label class="lblAlign">Phone:</label>
+                    <input type="text" size="2"/>-<input type="text" size="2"/>-<input type="text" size="3"/><br/>
+                    
+                    <input type="submit" value="Add Pet"/>
+                </form>
+        </div>
+        <form id="actions" action="makeReservation.html" method="get" style="display:inline;">
+        	<input type="submit" value="Make Reservation"/>
+			<input type="submit" value="Edit Account"/>
         </form>
-        <form action="custPetInfo.html">
-        	<input type="submit" style="margin-left:1.2em;" value="My Pets"/>
+        <form action="custPetInfo.html" style="display:inline">
+        	<input type="submit" value="My Pets"/>
         </form>
     </div>
 </body>
