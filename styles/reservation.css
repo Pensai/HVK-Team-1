@@ -1,0 +1,89 @@
+body{
+	background-color: #B6C0D8;
+	font-family:Verdana, Geneva, sans-serif;
+}
+
+#banner{
+	background-color: #B6C0D8;
+	margin-top:-1em;
+	margin-left:-1em;
+	width: 100%;
+}
+
+img{
+	margin-left:2em;
+}
+
+#accord p label{
+	margin-left:-1em;
+}
+
+#reserveForm{
+	margin-left:1.5em;
+	margin-right:1.5em;
+}
+
+#content{
+	width: 45em;
+	min-height:10em;
+	background-color:#D6D8D8;
+	border:thin solid black;
+	padding-bottom:1em;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.chbx{
+	text-align:left;
+	padding-left:1em;
+	width:230px;
+}
+
+label{
+	display:inline-block;
+	text-align:right;
+	width:110px;
+}
+
+#specialLbl, textarea{
+	margin-top:0.5em;
+	margin-bottom:0.5em;
+	display:inline-block;
+	vertical-align:middle;
+}
+
+.petLbls{
+	width:200px;
+}
+
+#MenuBar1{
+	width:25em;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:1em;
+}
+
+#item1{
+	border:thin black solid;
+}
+
+#item2, #item3{
+	border-top:thin black solid;
+	border-bottom:thin black solid;
+	border-right:thin black solid;
+}
+
+ul.MenuBarHorizontal a{
+	-o-transition: background-color 0.2s linear;
+	-moz-transition: background-color 0.2s linear;
+	-khtml-transition: background-color 0.2s linear;
+	-webkit-transition: background-color 0.2s linear;
+	-ms-transition: background-color 0.2s linear;
+	transition: background-color 0.2s linear;
+}
+
+ul.MenuBarHorizontal a:hover, ul.MenuBarHorizontal a:focus
+{
+	background-color: #5573B8;
+	color: #FFF;
+}

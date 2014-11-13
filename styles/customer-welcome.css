@@ -1,0 +1,82 @@
+body{
+	background-color: #B6C0D8;
+	font-family:Verdana, Geneva, sans-serif;
+}
+
+#banner{
+	background-color: #B6C0D8;
+	margin-top:-1em;
+	margin-left:-1em;
+	width: 100%;
+}
+
+#accordion p{
+	margin-top:-0.3em;
+}
+
+#accordion, #actions{
+	padding-left:1em;
+}
+
+#reservations{
+	margin-right:1.5em;
+}
+
+#actions{
+	margin-top:1.5em;	
+}
+
+#actions input{
+	margin-bottom:0.4em;
+}
+
+h2{
+	padding-left:1em;
+}
+
+#content{
+	width: 50em;
+	min-height:10em;
+	background-color:#D6D8D8;
+	border:thin solid black;
+	padding-bottom:1em;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:-1em;
+}
+
+img{
+	margin-left:2em;
+}
+
+#MenuBar1{
+	width:25em;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:1em;
+}
+
+#item1{
+	border:thin black solid;
+}
+
+#item2, #item3{
+	border-top:thin black solid;
+	border-bottom:thin black solid;
+	border-right:thin black solid;
+}
+
+ul.MenuBarHorizontal a{
+	-o-transition: background-color 0.2s linear;
+	-moz-transition: background-color 0.2s linear;
+	-khtml-transition: background-color 0.2s linear;
+	-webkit-transition: background-color 0.2s linear;
+	-ms-transition: background-color 0.2s linear;
+	transition: background-color 0.2s linear;
+}
+
+ul.MenuBarHorizontal a:hover, ul.MenuBarHorizontal a:focus
+{
+	background-color: #5573B8;
+	color: #FFF;
+}

@@ -1,0 +1,90 @@
+body{
+	background-color: #B6C0D8;
+	font-family:Verdana, Geneva, sans-serif;
+}
+
+#banner{
+	background-color: #B6C0D8;
+	margin-top:-1em;
+	margin-left:-1em;
+	width: 100%;
+}
+
+img{
+	margin-left:2em;
+}
+
+.nameAlign{
+	display:inline-block;
+	width:115px;
+	text-align:right;
+}
+
+.lblAlign{
+	display:inline-block;
+	width:115px;
+	margin-bottom:0.5em;
+	text-align:right;
+}
+
+#delPet{
+	padding-left:0.5em;
+}
+
+#delPet:hover{
+	text-decoration:underline !important;
+}
+
+.vaccAlign{
+	font-weight:bold;
+	display:inline-block;
+	width:139px;
+	text-align:right;
+}
+
+#content{
+	width:45em;
+	min-height:10em;
+	border:thin solid black;
+	background-color:#D6D8D8;
+	padding-bottom:1em;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#accord{
+	margin-left:1em;
+	margin-right:1em;
+}
+
+#MenuBar1{
+	width:25em;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:1em;
+}
+
+#item1{
+	border:thin black solid;
+}
+
+#item2, #item3{
+	border-top:thin black solid;
+	border-bottom:thin black solid;
+	border-right:thin black solid;
+}
+
+ul.MenuBarHorizontal a{
+	-o-transition: background-color 0.2s linear;
+	-moz-transition: background-color 0.2s linear;
+	-khtml-transition: background-color 0.2s linear;
+	-webkit-transition: background-color 0.2s linear;
+	-ms-transition: background-color 0.2s linear;
+	transition: background-color 0.2s linear;
+}
+
+ul.MenuBarHorizontal a:hover, ul.MenuBarHorizontal a:focus
+{
+	background-color: #5573B8;
+	color: #FFF;
+}
