@@ -22,6 +22,26 @@ body{
 	margin-right:1.5em;
 }
 
+.nameAlign{
+	display:inline-block;
+	width:115px;
+	text-align:right;
+}
+
+.lblAlign{
+	display:inline-block;
+	width:120px;
+	margin-bottom:0.5em;
+	text-align:right;
+}
+
+.vaccAlign{
+	font-weight:bold;
+	display:inline-block;
+	width:139px;
+	text-align:right;
+}
+
 #actions{
 	margin-top:1.5em;	
 }
