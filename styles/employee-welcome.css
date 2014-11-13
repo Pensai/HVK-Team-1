@@ -24,8 +24,12 @@ body{
 	margin-top:-1em;
 }
 
+table{
+	border-collapse: collapse;
+}
+
 table, td, th{
-	border:thin solid black;
+	border:1px solid black;
 }
 
 img{
