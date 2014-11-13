@@ -17,11 +17,15 @@ body{
 	width: 40em;
 	min-height:10em;
 	border:thin solid black;
-	background-color:#D6D8D8;
+	background-color:#EEEEEE;
 	padding-bottom:1em;
 	margin-left:auto;
 	margin-right:auto;
 	margin-top:-1em;
+}
+
+table, td, th{
+	border:thin solid black;
 }
 
 img{
