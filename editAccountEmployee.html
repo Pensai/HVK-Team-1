@@ -23,6 +23,11 @@
 	padding-left: 2em;
 	padding-right: 2em;
 }
+.input
+{
+	margin-bottom: 0.5em;
+}
+
 
 </style>
 </head>
@@ -37,38 +42,38 @@
     
     <div id="content">
     <form onsubmit="" method="get" action="customer-welcome.html">
-    	<strong style="font-size:22px">Edit Customer Information</strong><br/>
+    	<p style="font-size:22px; padding-bottom: 10px; font-weight: bold;">Edit Customer Information</p>
                     
-                    <label class="lblAlign">First Name:</label>
-                    <input type="text" class="date" size="20" value="Jim"/></br>
+                    <label for="fname" class="lblAlign">First Name:</label>
+                    <input type="text" class="input" name="fname" size="20" value="Jim"/></br>
                     
-                    <label class="lblAlign">Last Name:</label>
-                    <input type="text" class="date" size="20" value="Bob"/></br>
+                    <label for="lname" class="lblAlign">Last Name:</label>
+                    <input type="text" class="input" name="lname" size="20" value="Bob"/></br>
                     
-                    <label class="lblAlign">Address:</label>
-                    <input type="text" class="date" size="20" value="133 Main St."/></br>
+                    <label for="address" class="lblAlign">Address:</label>
+                    <input type="text" class="input" name="address" size="20" value="133 Main St."/></br>
                     
-                    <label class="lblAlign">City:</label>
-                    <input type="text" class="date" size="20" value="Ottawa"/></br>
+                    <label for="city" class="lblAlign">City:</label>
+                    <input type="text" class="input" name="city" size="20" value="Ottawa"/></br>
                     
-                    <label class="lblAlign">E-mail:</label>
-                    <input type="text" class="date" size="20" value="jimbob@hotmail.com"/></br>
+                    <label for="email" class="lblAlign">E-mail:</label>
+                    <input type="text" class="input" name="email" size="20" value="jimbob@hotmail.com"/></br>
                     
-                    <label class="lblAlign">Postal Code:</label>
-                    <input type="text" class="date" size="20" value="X1X 1X1"/></br>
+                    <label for="postal" class="lblAlign">Postal Code:</label>
+                    <input type="text" class="input" name="postal" size="20" value="X1X 1X1"/></br>
 
-                    <strong style="font-size:22px">Edit Emergency Contact Information</strong>
+                    <p style="font-size:22px; margin-top: 1em; font-weight: bold;">Edit Emergency Contact Information</p>
 
-                    <label class="lblAlign">First Name:</label>
-                    <input type="text" class="date" size="20"/></br>
+                    <label for="efname" class="lblAlign">First Name:</label>
+                    <input type="text" class="input" name="efname" size="20" value="John"/></br>
 
-                    <label class="lblAlign">Last Name:</label>
-                    <input type="text" class="date" size="20"/></br> 
+                    <label for="elname" class="lblAlign">Last Name:</label>
+                    <input type="text" class="input" name="elname"size="20" value="Cena"/></br> 
 
-                    <label class="lblAlign">Phone:</label>
-                    <input type="text" class="date" size="20"/></br>
+                    <label for="ephone" class="lblAlign">Phone:</label>
+                    <input type="text" class="input" name="ephone" size="20" value="613-213-4321"/></br>
 
-                    <input style="margin-left:9.5em;" type="submit" value="Confirm" />
+                    <input style="margin-left:8em; margin-top: 1em;" type="submit" value="Confirm" /> | <a href="employee-welcome.html">Cancel</a>
     </form>
     </div>
 </body>
