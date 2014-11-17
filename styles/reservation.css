@@ -26,11 +26,12 @@ img{
 #content{
 	width: 45em;
 	min-height:10em;
-	background-color:#D6D8D8;
+	background-color:#EEEEEE;
 	border:thin solid black;
 	padding-bottom:1em;
 	margin-left:auto;
 	margin-right:auto;
+	margin-top:-1em;
 }
 
 .chbx{
@@ -84,6 +85,6 @@ ul.MenuBarHorizontal a{
 
 ul.MenuBarHorizontal a:hover, ul.MenuBarHorizontal a:focus
 {
-	background-color: #5573B8;
+	background-color: #00B4FF;
 	color: #FFF;
 }

@@ -15,18 +15,22 @@
 	function onload(){
 		$('.datepicker').datepicker();
 		$('#accord').accordion();
-		$('#sub').button();
 	}
 	
 	function clearAll(){
 		$('.datepicker').val("");
 		$('.input').val("");
 	}
+
+    function displayMed(){
+        if(document.getElementById('med').checked){
+
+        }
+    }
 </script>
 </head>
 
 <body onload="onload()">
-<div id="banner" style="text-align:center"><img src="styles/logo.png" width="500" height="250" alt="HVK logo"></div>
     <ul id="MenuBar1" class="MenuBarHorizontal">
       <li id="item1"><a href="login.html">Home</a></li>
       <li id="item2"><a href="#">Info</a></li>
@@ -69,12 +73,7 @@
                         <br/>
                         
                         <label class="petLbls"><strong>Special Services:</strong></label> (optional)<br/>
-                        <input type="checkbox"/> <label class="chbx">Walk</label><br/>
                         
-                        <input type="checkbox"/> <label class="chbx">Grooming</label><br/>
-                        
-                        <input type="checkbox"/> <label class="chbx">Medication Administration</label><br/>
-                        <input type="checkbox"/> <label class="chbx">Playtime</label><br/>
                     </p>
                 </div>
                 <br/>
