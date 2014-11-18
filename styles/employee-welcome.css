@@ -26,6 +26,7 @@ body{
 
 table{
 	border-collapse: collapse;
+	width: 97%;
 }
 
 table, td, th{
@@ -66,4 +67,18 @@ ul.MenuBarHorizontal a:hover, ul.MenuBarHorizontal a:focus
 {
 	background-color: #00B4FF;
 	color: #FFF;
+}
+
+#verifyReservation {
+	float:right;
+	padding-right:6%;
+}
+
+#reservationTable {
+	margin-left:1em; 
+	border-collapse:collapse;
+}
+
+.noBordersOnButton{
+	padding-left:2%;
 }
