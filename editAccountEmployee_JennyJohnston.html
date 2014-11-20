@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HVK -- Edit Customer Account</title>
+<link href="styles/site.css" rel="stylesheet" type="text/css">
+<link href="styles/SpryAssets/SpryMenuBarHorizontal.css" rel="stylesheet" type="text/css">
+<script src="styles/SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+
+</script>
+<style>
+.lblAlign{
+	display:inline-block;
+	width:120px;
+	margin-bottom:0.5em;
+	text-align:right;
+}
+#content{
+	margin-top: -2em;
+	padding-top: 2em;
+	padding-left: 2em;
+	padding-right: 2em;
+}
+.input
+{
+	margin-bottom: 0.5em;
+}
+
+
+</style>
+</head>
+
+<body>
+
+    <ul id="MenuBar1" class="MenuBarHorizontal">
+      <li id="item1"><a href="#">Home</a></li>
+      <li id="item2"><a href="#">Info</a></li>
+      <li id="item3"><a href="login.html">Login</a></li>
+    </ul><br/><br/>
+    
+    <div id="content">
+    <form onsubmit="" method="get" action="customer-welcome.html">
+    	<p style="font-size:22px; padding-bottom: 10px; font-weight: bold;">Edit Customer Information</p>
+                    
+                    <label for="fname" class="lblAlign">First Name:</label>
+                    <input type="text" class="input" name="fname" size="20" value="Jenny"/></br>
+                    
+                    <label for="lname" class="lblAlign">Last Name:</label>
+                    <input type="text" class="input" name="lname" size="20" value="Johnston"/></br>
+                    
+                    <label for="address" class="lblAlign">Address:</label>
+                    <input type="text" class="input" name="address" size="20" value="728 Freeman Drive"/></br>
+                    
+                    <label for="city" class="lblAlign">City:</label>
+                    <input type="text" class="input" name="city" size="20" value="Ottawa"/></br>
+
+                    <label for="province" class="lblAlign">Province:</label>
+                    <select style="width: 13em;" name="province" class="input">
+                        <option value="volvo">Quebec</option>
+                        <option value="saab">Nova Scotia</option>
+                        <option value="mercedes">Prince Edward Island</option>
+                        <option value="audi">Ontario</option>
+                        <option value="volvo">Saskatchewan</option>
+                        <option value="saab">Alberta</option>
+                        <option value="mercedes">British Columbia</option>
+                        <option value="audi">Northwest Territories</option>
+                        <option value="audi">Nunavut</option>
+                        <option value="audi">Manitoba</option>
+                        <option value="audi">Yukon</option>
+                        <option value="audi">New Brunswick</option>
+                    </select><br>
+
+                    <label for="postal" class="lblAlign">Postal Code:</label>
+                    <input type="text" class="input" name="postal" size="20" value="B0P 1R0"/></br>
+                    
+                    <label for="email" class="lblAlign">E-mail:</label>
+                    <input type="text" class="input" name="email" size="20" value="JennyJohnston@hotmail.com"/></br>
+                    
+                    <label for="cphone" class="lblAlign">Phone:</label>
+                    <input type="text" class="input" name="cphone" size="20" value="666-666-6666"/></br>
+
+                    <p style="font-size:22px; margin-top: 1em; font-weight: bold;">Edit Emergency Contact Information</p>
+
+                    <label for="efname" class="lblAlign">First Name:</label>
+                    <input type="text" class="input" name="efname" size="20" value="Fred"/></br>
+
+                    <label for="elname" class="lblAlign">Last Name:</label>
+                    <input type="text" class="input" name="elname"size="20" value="Rogers"/></br> 
+
+                    <label for="ephone" class="lblAlign">Phone:</label>
+                    <input type="text" class="input" name="ephone" size="20" value="613-213-4321"/></br>
+
+                    <input style="margin-left:8em; margin-top: 1em;" type="submit" value="Confirm" /> | <a href="employee-welcome.html">Cancel</a>
+    </form>
+    </div>
+</body>
+</html>
