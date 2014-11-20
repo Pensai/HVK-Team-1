@@ -1,0 +1,12 @@
+#searchResults {
+	padding-left: 4%;
+}
+
+table tr td p{
+	text-align: center;
+}
+
+table tr td input{
+	margin-right:auto;
+	margin-left:auto;
+}
