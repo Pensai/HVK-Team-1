@@ -66,28 +66,37 @@
         </div>
         
         <div id="reservations" style="margin-bottom:1em;">
-        	<h3 style="margin-left:1em;">Current Reservations:</h3>
+        	<h3 style="margin-left:1em;">Current Reservations</h3>
             
             <div id="accordion">
             	<h3>Start Date: 31/10/2014 <span style="border-left:thin solid black; padding-left:0.5em"><input type="button" value="Edit"/></span></h3>
                 <div>
                 	<p>End Date: 14/11/2014 <button style="margin-left:1em" onclick="removePop();">Delete</button><br/>
-                    <strong>Pet(s):</strong>
+                    <strong>Pet(s)</strong>
                     	<ul style="margin-left:-2em; list-style-type:none;">
                         	<li>- Fluffy</li>
                             <li>- Charlie</li>
                         </ul>
                     </p>
-                    
+                    <strong>Services</strong>
+                        <ul style="margin-left:-2em; list-style-type:none;">
+                            <li>- Walks: 2</li>
+                            <li>- Grooming: 1</li>
+                        </ul>
                 </div>
                 
                 <h3>Start Date: 04/02/2015 <span style="border-left:thin solid black; padding-left:0.5em"><input type="button" value="Edit"/></span></h3>
                 <div>
                 	<p>End Date: 28/03/2015 <button style="margin-left:1em">Delete</button><br/>
-                    <strong>Pet(s):</strong>
+                    <strong>Pet(s)</strong>
                     	<ul class="petUL" style="margin-left:-2em; list-style-type:none;">
                         	<li>- Fluffy</li>
                             <li>- Charlie</li>
+                        </ul>
+                        <strong>Services</strong>
+                         <ul style="margin-left:-2em; list-style-type:none;">
+                            <li>- Walks: 1</li>
+                            <li>- Grooming: 1</li>
                         </ul>
                     </p>
                 </div>
@@ -101,12 +110,13 @@
                 <span style="display:block; width:15em; float:left;">
                     <span class="nameAlign"><strong>Name:</strong></span> Fluffy<br/>
                     <span class="nameAlign"><strong>Pet Type:</strong></span> Dog<br/>
+                    <span class="nameAlign"><strong>Gender:</strong></span> Male<br/>
                     <span class="nameAlign"><strong>Fixed:</strong></span> Yes<br/>
                     <span class="nameAlign"><strong>Birth date:</strong></span> 10/31/2010<br/>
                     <span class="nameAlign"><strong>Size:</strong></span> Small<br/>
                     <span class="nameAlign"><strong>Food:</strong></span> Pedigree<br/>
                     <br/>
-                    <strong style="font-size:22px">Vaccinations</strong><br/>
+                    <span style="display:inline-block; width:30em"><strong style="font-size:22px">Vaccination Expiry Dates</strong></span><br/>
                     <span class="vaccAlign">Bordetella:</span> 05/15/2017<br/>
                     <span class="vaccAlign">Distemper:</span> 01/02/2016<br/>
                     <span class="vaccAlign">Hepatitis:</span> 03/15/2016<br/>
@@ -131,12 +141,13 @@
                 <span style="display:block; width:15em; float:left;">
                     <span class="nameAlign"><strong>Name:</strong></span> Charlie<br/>
                     <span class="nameAlign"><strong>Pet Type:</strong></span> Dog<br/>
+                    <span class="nameAlign"><strong>Gender:</strong></span> Male<br/>
                     <span class="nameAlign"><strong>Fixed:</strong></span> Yes<br/>
                     <span class="nameAlign"><strong>Birth date:</strong></span> 10/11/2010<br/>
                     <span class="nameAlign"><strong>Size:</strong></span> Medium<br/>
                     <span class="nameAlign"><strong>Food:</strong></span> Pedigree<br/>
                     <br/>
-                    <strong style="font-size:22px">Vaccinations</strong><br/>
+                    <strong style="font-size:22px">Vaccination Expiry Dates</strong><br/>
                     <span class="vaccAlign">Bordetella:</span> 05/15/2017<br/>
                     <span class="vaccAlign">Distemper:</span> 01/02/2016<br/>
                     <span class="vaccAlign">Hepatitis:</span> 03/15/2016<br/>
@@ -167,6 +178,12 @@
                         <option>Dog</option>
                         <option>Cat</option>
                     </select><br/>
+
+                    <label class="lblAlign">Gender:</label>
+                    <select>
+                        <option>Female</option>
+                        <option>Male</option>
+                    </select><br/>
                     
                     <label class="lblAlign">Fixed:</label>
                     <input type="checkbox"/><br/>
@@ -194,7 +211,7 @@
                     <label class="lblAlign">Own Food:</label>
                     <input type="checkbox" onclick="disableEnable()"/><br/>
                     
-                    <strong style="font-size:20px">Vaccinations</strong><br/>
+                    <span style="display:block; width:30em"><strong style="font-size:20px;">Vaccination Expiry Dates</strong></span><br/>
                     
                     <label class="lblAlign">Bordetella:</label>
                     <input type="text" class="date" size="10"/></br>
