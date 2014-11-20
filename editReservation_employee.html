@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HVK -- Reservation Form</title>
+<link href="styles/reservation.css" rel="stylesheet" type="text/css">
+<link href="styles/SpryAssets/SpryMenuBarHorizontal.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="styles/jquery-ui/jquery-ui.css">
+
+<script src="styles/SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
+<script type="text/javascript" src="scripts/jquery.js"></script>
+<script type="text/javascript" src="scripts/jquery-ui.js"></script>
+
+<script type="text/javascript">
+	function onload(){
+		$('.datepicker').datepicker();
+		$('#accord').accordion();
+	}
+	
+	function clearAll(){
+		$('.datepicker').val("");
+		$('.input').val("");
+	}
+
+    function displayMed(){
+        if(document.getElementById('med').checked){
+
+        }
+    }
+
+    function enableDisable(fld){
+        if($(fld).is(":disabled")){
+            $(fld).prop("disabled", false);
+        }else{
+            $(fld).prop("disabled", true);
+        }
+    }
+
+    function confPopup(){
+        alert("Your reservation has been placed and is pending confirmation. You have been sent a confirmation email to the provided email address.");
+        window.location = "customer-welcome.html";
+    }
+</script>
+</head>
+
+<body onload="onload()">
+    <ul id="MenuBar1" class="MenuBarHorizontal">
+      <li id="item1"><a href="login.html">Home</a></li>
+      <li id="item2"><a href="#">Info</a></li>
+      <li id="item3"><a href="customer-welcome.html">My Account</a></li>
+    </ul><br/><br/>
+    
+    <div id="content">
+    	<h1 style="text-align:center; padding-top:0.5em;">Edit a Reservation</h1>
+        <div style="padding-left:1.5em;">
+        	<strong>Name:</strong> Jim Bob<br/>
+            <strong>Address:</strong> 133 Main St., Ottawa, ON, L7N1C1<br/>
+            <strong>Phone:</strong> 613-555-1234
+        </div>
+        
+        <div id="reserveForm">
+            <h3>Reservation Information</h3>
+            <form action="#" id="petForm">
+            	<label>Start Date:</label>
+                <input type="text" class="datepicker" value="31/10/2014" size="9"/><br/>
+                
+                <label>End Date:</label>
+                <input type="text" class="datepicker" value="14/11/2014" size="9"/><br/><br/>
+                
+                <div id="accord">
+                	<h3>First Pet</h3>
+                    <p>
+                    	<label class="petLbls">Select Pet:</label>
+                        <select id="sel" onChange="$('#alert').css('display', 'inline')">
+                        	<option>-----</option>
+                        	<option value="fluffy">Fluffy</option>
+                            <option value="charlie">Charlie</option>
+                            <option value="Billy" selected>Billy</option>
+                        </select>
+                        
+                        <span id="alert" style="display:none;" class="ui-state-error"><span class="ui-icon ui-icon-alert" style="display:inline-block"></span> Vaccinations are expired&nbsp;</span>
+                        <br/>
+                        
+                        <label id="specialLbl" class="petLbls">Special Requirements:</label>
+                        <textarea rows="1" style="width: 274px; height: 44px;" form="petForm" class="input" >Billy likes his water with a slice of lemon.</textarea> (optional)
+                        <br/><br>
+                        
+                        <label class="petLbls"><strong>Special Services:</strong></label> (optional)<br/><br>
+                        
+                        <label class="chbx">Walks</label>
+                        <input type="checkbox" checked/>
+                        <input type="number" id="walkNum" value="2" style="width:2em;"/> | $2.00/walk: small dog<br/>
+
+                        <label class="chbx">Grooming</label>
+                        <input onclick="enableDisable('#groomNum')" type="checkbox" />
+                        <input type="number" id="groomNum" disabled  style="width:2em;"/> | $2.00/session: small dog<br/>
+
+                        <label class="chbx" style="margin-top:1em">Medication</label>
+                        <input type="checkbox" checked onclick="enableDisable('#medNum'); enableDisable('#notes')"/>
+                        <input type="number" id="medNum" value="2" style="width:2em;"/> | $1.00/day<br/>
+                        <textarea style="width: 275px; height:44px; margin-top:0.5em;margin-left:10.3em" rows="1" id="notes" placeholder="Name(s), dosage, and additional notes." >Apomorphine, twice a day, directly after meals.</textarea><br/>
+
+                        <label class="chbx">2nd Feeding:</label>
+                        <input checked type="checkbox"/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $2.00/session: small dog<br/>
+
+                        <label class="chbx" style="margin-top:0.5em">Playtime</label>
+                        <input type="checkbox" onclick="enableDisable('#playNum')"/>
+                        <input type="number" disabled id="playNum" style="width:2em;"/> | $2.00/day<br/>
+                    </p>
+                </div>
+                <br/>
+                <input type="button" value="Add Pet"/><br/>
+                <br/>
+                <input type="button" onclick="confPopup()" value="Update Reservation" id="sub"/> <a href="#" onClick="clearAll()" style="color:black; border-left: thin solid black; padding-left:0.5em;">Clear Fields</a>
+            </form>
+		</div>
+    </div>
+</body>
+</html>
