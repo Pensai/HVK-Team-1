@@ -27,6 +27,19 @@
 
         }
     }
+
+    function enableDisable(fld){
+        if($(fld).is(":disabled")){
+            $(fld).prop("disabled", false);
+        }else{
+            $(fld).prop("disabled", true);
+        }
+    }
+
+    function confPopup(){
+        alert("Your reservation has been placed and is pending confirmation. You have been sent a confirmation email to the provided email address.");
+        window.location = "customer-welcome.html";
+    }
 </script>
 </head>
 
@@ -74,12 +87,28 @@
                         
                         <label class="petLbls"><strong>Special Services:</strong></label> (optional)<br/>
                         
+                        <label class="chbx">Walks</label>
+                        <input type="checkbox" onclick="enableDisable('#walkNum')"/>
+                        <input type="number" id="walkNum" disabled style="width:2em;"/> | $2.00/walk: small dog<br/>
+
+                        <label class="chbx">Grooming</label>
+                        <input type="checkbox" onclick="enableDisable('#groomNum')"/>
+                        <input type="number" disabled id="groomNum" style="width:2em;"/> | $2.00/session: small dog<br/>
+
+                        <label class="chbx" style="margin-top:1em">Medication</label>
+                        <input type="checkbox" onclick="enableDisable('#medNum'); enableDisable('#notes')"/>
+                        <input type="number" id="medNum" disabled style="width:2em;"/> | $1.00/day<br/>
+                        <textarea style="margin-top:0.2em;margin-left:7.5em" rows="1" id="notes" placeholder="Name(s), dosage, and additional notes." disabled></textarea><br/>
+
+                        <label class="chbx" style="margin-top:0.5em">Playtime</label>
+                        <input type="checkbox" onclick="enableDisable('#playNum')"/>
+                        <input type="number" disabled id="playNum" style="width:2em;"/> | $2.00/day<br/>
                     </p>
                 </div>
                 <br/>
                 <input type="button" value="Add Pet"/><br/>
                 <br/>
-                <input type="submit" value="Place Reservation" id="sub"/> <a href="#" onClick="clearAll()" style="color:black; border-left: thin solid black; padding-left:0.5em;">Clear Fields</a>
+                <input type="button" onclick="confPopup()" value="Place Reservation" id="sub"/> <a href="#" onClick="clearAll()" style="color:black; border-left: thin solid black; padding-left:0.5em;">Clear Fields</a>
             </form>
 		</div>
     </div>
