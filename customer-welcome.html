@@ -24,6 +24,10 @@
         });
 	}
 
+    function dates(){
+        $('.date').datepicker();
+    }
+
     function popup(){
         if(confirm("You are about to remove this pet. Are you sure?")){
             window.location = "customer-welcomeNoPets.html";
@@ -46,7 +50,7 @@
 </script>
 </head>
 
-<body onLoad="accord()">
+<body onLoad="accord(); dates();">
     <ul id="MenuBar1" class="MenuBarHorizontal">
       <li id="item1"><a href="login.html">Home</a></li>
       <li id="item2"><a href="#">Info</a></li>
