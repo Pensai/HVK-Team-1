@@ -13,13 +13,29 @@
 <script type="text/javascript">
 
 
-//$(document).ready(function {
-//    $('#dialog').dialog({ autoOpen: false });
+function onHoverDiag()
+{
+    $dogument.ready(function {
+        $('#dialog').dialog("open");
+    });
+}
+
+function onBlurDiag()
+{
+    $dogument.ready(function {
+        $('#dialog').dialog("close");
+    });
+}
+// $(document).ready(function {
+//     $('#dialog').hover(function {
+//         $('#dialog').dialog({ autoOpen: false });
+//     });
+   
          
-//});
-$(function () {
-    $(document).tooltip();
-});
+// });
+// $(function () {
+//     $(document).tooltip();
+// });
     
 </script>
 
@@ -87,8 +103,9 @@ $(function () {
                     <td>14/11/2014</td>
                     <td class="noBordersOnButton">
                         <input type="submit" value="Delete Reservation">
-                        <form method="post" action="editReservation.html">
+                        <form method="post" action="editReservation_employee.html">
                             <input type="submit"  value="Edit Reservation">
+                            <input  id="dialog" title="Billy has some outdated vaccinations" type="button" value="Update Vaccinations" onfocus="onHoverDiag()" onblur="onBlurDiag()">
                         </form>
                     </td>                  
                 </tr>
