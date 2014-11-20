@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HVK -- Edit Pet Info</title>
+<link href="styles/customer-welcome.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="styles/jquery-ui/jquery-ui.css">
+<link href="styles/SpryAssets/SpryMenuBarHorizontal.css" rel="stylesheet" type="text/css">
+
+<script src="styles/SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
+<script type="text/javascript" src="scripts/jquery.js"></script>
+<script type="text/javascript" src="scripts/jquery-ui.js"></script>
+
+</head>
+
+<body>
+    <ul id="MenuBar1" class="MenuBarHorizontal">
+      <li id="item1"><a href="login.html">Home</a></li>
+      <li id="item2"><a href="#">Info</a></li>
+      <li id="item3"><a href="login.html">Login</a></li>
+    </ul><br/><br/>
+    
+    <div id="content">
+	
+	<h3>New Pet</h3>
+                <form action="#" method="get">
+				  <fieldset>
+					<legend><strong style="font-size:20px">Customer Information</strong></legend>
+             
+                    <label class="lblAlign">Name:</label>
+                    <input type="text"/><br/>
+                  
+                    <label class="lblAlign">Pet Type:</label>
+                    <select>
+                        <option>Dog</option>
+                        <option>Cat</option>
+                    </select><br/>
+                    
+                    <label class="lblAlign">Fixed:</label>
+                    <input type="checkbox"/><br/>
+                    
+                    <label class="lblAlign">Birth Date:</label>
+                    <input type="text" class="date" size="10"/><br/>
+                    
+                    <label class="lblAlign">Size:</label>
+                    <select>
+                        <option>Small</option>
+                        <option>Medium</option>
+                        <option>Large</option>
+                    </select><br/>
+                    
+                    <label class="lblAlign">Food:</label>
+                    <select id="food">
+                        <option>------------------</option>
+                        <option>Blackwood</option>
+                        <option>Dogswell</option>
+                        <option>Happy Paws</option>
+                        <option>Natural Balance</option>
+                        <option>Pedigree</option>
+                    </select><br/>
+
+                    <label class="lblAlign">Own Food:</label>
+                    <input type="checkbox" onclick="disableEnable()"/><br/>
+                </fieldset>
+					
+					
+					  <fieldset>
+					<legend><strong style="font-size:20px">Vaccination Expiry Dates</strong></legend>
+                    
+                    <label class="lblAlign">Bordetella:</label>
+                    <input type="text" class="date" size="10"/></br>
+                    
+                    <label class="lblAlign">Distemper:</label>
+                    <input type="text" class="date" size="10"/></br>
+                    
+                    <label class="lblAlign">Hepatitis:</label>
+                    <input type="text" class="date" size="10"/></br>
+                    
+                    <label class="lblAlign">Parainfuenza:</label>
+                    <input type="text" class="date" size="10"/></br>
+                    
+                    <label class="lblAlign">Parvovirus:</label>
+                    <input type="text" class="date" size="10"/></br>
+                    
+                    <label class="lblAlign">Rabies:</label>
+                    <input type="text" class="date" size="10"/></br>
+                    </fieldset>
+					
+					
+					<fieldset>
+					<legend><strong style="font-size:20px">Vet Information</strong></legend>
+                    <br/>
+                    <label class="lblAlign">Name:</label>
+                    <input type="text"/><br/>
+                    
+                    <label class="lblAlign">Phone:</label>
+                    <input type="text" size="2"/>-<input type="text" size="2"/>-<input type="text" size="3"/><br/>
+                     </fieldset>
+                    <input type="submit" value="Add Pet" style="margin-left:7.1em;"/><a>Cancel</a>
+					
+                </form>
+	
+	
+	</div>
+</body>
+</html>
