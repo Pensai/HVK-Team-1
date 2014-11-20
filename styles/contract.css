@@ -1,0 +1,87 @@
+body{
+	background-image: url("../images/mainBackground.png");
+	font-family:Verdana, Geneva, sans-serif;
+}
+
+#employeeForm{
+	float:right;
+}
+
+#login{
+	width:30em;
+	min-height:10em;
+	padding-top:1em;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#customerForm{
+	float:left;
+	border-right:thin dotted black;
+	
+}
+
+.title{
+	margin-bottom:0.4em;
+	font-weight:bold;
+}
+
+.password{
+	margin-bottom:0.5em;
+}
+
+img{
+	margin-left:2em;
+}
+
+#content{
+	width: 45em;
+	min-height:10em;
+	background-color:#EEEEEE;
+	border:thin solid black;
+	padding-bottom:1em;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:-1em;
+}
+
+#MenuBar1{
+	width:25em;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:1em;
+}
+
+#newCust{
+	margin-top:1em;
+	margin-left:1.5em;
+}
+
+#item1{
+	border:thin black solid;
+}
+
+#item2, #item3{
+	border-top:thin black solid;
+	border-bottom:thin black solid;
+	border-right:thin black solid;
+}
+
+ul.MenuBarHorizontal{
+
+}
+
+ul.MenuBarHorizontal a{
+	-o-transition: background-color 0.2s linear;
+	-moz-transition: background-color 0.2s linear;
+	-khtml-transition: background-color 0.2s linear;
+	-webkit-transition: background-color 0.2s linear;
+	-ms-transition: background-color 0.2s linear;
+	transition: background-color 0.2s linear;
+}
+
+ul.MenuBarHorizontal a:hover, ul.MenuBarHorizontal a:focus
+{
+	background-color: #00B4FF;
+	color: #FFF;
+}
