@@ -4,28 +4,15 @@
 <meta charset="utf-8">
 <title>HVK -- Welcome</title>
 <link href="styles/employee-welcome.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="styles/jquery-ui/jquery-ui.css">
 <link href="styles/SpryAssets/SpryMenuBarHorizontal.css" rel="stylesheet" type="text/css">
+
 <script src="styles/SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
 
 <script type="text/javascript" src="scripts/jquery.js"></script>
 <script type="text/javascript" src="scripts/jquery-ui.js"></script>
 
 <script type="text/javascript">
-
-
-// function onHoverDiag()
-// {
-//     $dogument.ready(function {
-//         $('#dialog').dialog("open");
-//     });
-// }
-
-// function onBlurDiag()
-// {
-//     $dogument.ready(function {
-//         $('#dialog').dialog("close");
-//     });
-// }
 
 function checkDeleteRes()
 {
@@ -34,23 +21,28 @@ function checkDeleteRes()
         window.location = "employee-welcome_JimBobDeleted.html";
     }
 }
-// $(document).ready(function {
-//     $('#dialog').hover(function {
-//         $('#dialog').dialog({ autoOpen: false });
-//     });
-   
-         
-// });
-// $(function () {
-//     $(document).tooltip();
-// });
-    
+
+function dialog()
+{
+    $("#dialog").dialog({autoOpen: false});
+}
+
+function onClickDialog()
+{
+    $("#dialog").dialog("open");
+}
+
+function onMouseOutDialog()
+{
+    $("#dialog").dialog("close");
+}
+
 </script>
 
 </script>
 </head>
 
-<body>
+<body onLoad="dialog()">
     <ul id="MenuBar1" class="MenuBarHorizontal">
       <li id="item1"><a href="login.html">Home</a></li>
       <li id="item2"><a href="#">Info</a></li>
@@ -71,6 +63,7 @@ function checkDeleteRes()
                 <input id="sub" type="submit" value="Search"/>
             </form>
         </div>
+
         <div id="reservations">
         <h3 style="margin-left:1em;">Today's Reservations</h3>
             <table id="reservationTable">
@@ -79,11 +72,11 @@ function checkDeleteRes()
                     <th>Pets</th>
                     <th>Start Date</th>
                     <th>End Date</th>
-                    <th>Action</th>
+                    <th style="width: 11em;">Action</th>
                 </tr>
 
                 <tr>
-                    <td>Jim Bob</td>
+                    <td style="text-align:center;">Jim Bob</td>
                     <td style="width: 7em;">
                         <ul style="list-style-type:none; margin-left:-1em; margin-right:1em;">
                             <li>- Charlie</li>
@@ -94,8 +87,6 @@ function checkDeleteRes()
                     <td>14/11/2014</td>
                     <td class="noBordersOnButton">
                             <button onclick="checkDeleteRes()">Delete Reservation</button>
-                        
-
                         <form method="post" action="editReservation.html">
                             <input type="submit"  value="Edit Reservation">
                         </form>
@@ -103,7 +94,7 @@ function checkDeleteRes()
                     </td>
                 </tr>
                 <tr>
-                    <td>Jenny Johnston</td>
+                    <td style="text-align:center;">Jenny Johnston</td>
                     <td>
                         <ul style="list-style-type:none; margin-left:-1em; margin-right:1em;">
                             <li>- Billy</li>
@@ -115,8 +106,14 @@ function checkDeleteRes()
                         <input type="submit" value="Delete Reservation">
                         <form method="post" action="editReservation_employee.html">
                             <input type="submit"  value="Edit Reservation">
-                            <input  id="dialog" title="Billy has some outdated vaccinations" type="button" value="Update Vaccinations" onfocus="onHoverDiag()" onblur="onBlurDiag()">
+                            
                         </form>
+                        <form method="post" action="customer-editPetInfo_jennyJonston_billy.html">
+                            <input type="submit" onmouseover="onClickDialog()" onmouseout="onMouseOutDialog()" id="vaccinations" value="Update Vaccination">
+                        </form>
+                        <div id="dialog" title="Vaccinations">
+                            <p>Billy's Hepatitis Vaccination is out of date.</p>
+                        </div>
                     </td>                  
                 </tr>
             </table>
@@ -132,17 +129,17 @@ function checkDeleteRes()
                     <th>Action</th>
                 </tr>
                 <tr>
-                    <td>Suzy Brooks</td>
-                    <td>
+                    <td style="text-align:center;">Suzy Brooks</td>
+                    <td style="width: 8em;">
                         <ul style="list-style-type:none; margin-left:-1em; margin-right:1em;">
                             <li>- Sammy</li>
                             <li>- Saul</li>
                         </ul>
                     </td>
-                    <td>12/03/2015</td>
-                    <td>14/04/2015</td>
+                    <td style="text-align: center;">12/03/2015</td>
+                    <td style="text-align: center;">14/04/2015</td>
                     <td class="noBordersOnButton">                    
-                        <input type="submit" value="Confirm Reservation" onclick="">
+                        <input style="" type="submit" value="Confirm Reservation" onclick="">
                     </td>
                 </tr>
             </table>
