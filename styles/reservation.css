@@ -18,6 +18,12 @@ img{
 	margin-left:-1em;
 }
 
+.nameAlign{
+	display:inline-block;
+	width:115px;
+	text-align:right;
+}
+
 #reserveForm{
 	margin-left:1.5em;
 	margin-right:1.5em;
