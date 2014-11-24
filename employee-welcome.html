@@ -13,18 +13,26 @@
 <script type="text/javascript">
 
 
-function onHoverDiag()
-{
-    $dogument.ready(function {
-        $('#dialog').dialog("open");
-    });
-}
+// function onHoverDiag()
+// {
+//     $dogument.ready(function {
+//         $('#dialog').dialog("open");
+//     });
+// }
 
-function onBlurDiag()
+// function onBlurDiag()
+// {
+//     $dogument.ready(function {
+//         $('#dialog').dialog("close");
+//     });
+// }
+
+function checkDeleteRes()
 {
-    $dogument.ready(function {
-        $('#dialog').dialog("close");
-    });
+    if(confirm("Are you sure you want to Delete this Reservation?"))
+    {
+        window.location = "employee-welcome_JimBobDeleted.html";
+    }
 }
 // $(document).ready(function {
 //     $('#dialog').hover(function {
@@ -76,7 +84,7 @@ function onBlurDiag()
 
                 <tr>
                     <td>Jim Bob</td>
-                    <td>
+                    <td style="width: 7em;">
                         <ul style="list-style-type:none; margin-left:-1em; margin-right:1em;">
                             <li>- Charlie</li>
                             <li>- Jim</li>
@@ -85,11 +93,13 @@ function onBlurDiag()
                     <td>31/10/2014</td>
                     <td>14/11/2014</td>
                     <td class="noBordersOnButton">
-                        <input type="submit" value="Delete Reservation">
+                            <button onclick="checkDeleteRes()">Delete Reservation</button>
+                        
+
                         <form method="post" action="editReservation.html">
                             <input type="submit"  value="Edit Reservation">
                         </form>
-                        
+                        <input type="submit" value="Update Vaccinations">
                     </td>
                 </tr>
                 <tr>
@@ -113,7 +123,7 @@ function onBlurDiag()
 
             <h3 style="margin-left:1em;">Unconfirmed Reservations</h3>
 
-            <table style="margin-left:1em;">
+            <table id="reservationTable">
                 <tr>
                     <th>Customer</th>
                     <th>Pets</th>
