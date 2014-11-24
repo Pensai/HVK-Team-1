@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HVK -- Welcome</title>
+<link href="styles/employee-welcome.css" rel="stylesheet" type="text/css">
+<link href="styles/SpryAssets/SpryMenuBarHorizontal.css" rel="stylesheet" type="text/css">
+<script src="styles/SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="scripts/jquery.js"></script>
+<script type="text/javascript" src="scripts/jquery-ui.js"></script>
+
+<script type="text/javascript">
+
+
+function onHoverDiag()
+{
+    $dogument.ready(function {
+        $('#dialog').dialog("open");
+    });
+}
+
+function onBlurDiag()
+{
+    $dogument.ready(function {
+        $('#dialog').dialog("close");
+    });
+}
+
+
+// $(document).ready(function {
+//     $('#dialog').hover(function {
+//         $('#dialog').dialog({ autoOpen: false });
+//     });
+   
+         
+// });
+// $(function () {
+//     $(document).tooltip();
+// });
+    
+</script>
+
+</script>
+</head>
+
+<body>
+    <ul id="MenuBar1" class="MenuBarHorizontal">
+      <li id="item1"><a href="login.html">Home</a></li>
+      <li id="item2"><a href="#">Info</a></li>
+      <li id="item3"><a href="#">My Account</a></li>
+    </ul><br/><br/>
+    
+    <div id="content">
+    	<h1 style="text-align:center; padding-top:0.5em;">Welcome Back Bob</h1>
+    	<div style="padding-left:1.5em;">
+        	<strong>Employee ID:</strong> 0032A<br/>
+        	<strong>Name:</strong> Bob Jim<br/>
+        </div>
+        
+        <div id="search">
+        	<form action="searchResults.html" method="get">
+            	<label>Search Customer:</label>
+                <input type="text" placeholder="Enter a Name, Email, or Phone Number" size="32"/>
+                <input id="sub" type="submit" value="Search"/>
+            </form>
+        </div>
+        <div id="reservations">
+        <h3 style="margin-left:1em;">Today's Reservations</h3>
+            <table id="reservationTable">
+                <tr>
+                    <th>Customer</th>
+                    <th>Pets</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Action</th>
+                </tr>
+
+                <tr>
+                    <td>Jenny Johnston</td>
+                    <td>
+                        <ul style="list-style-type:none; margin-left:-1em; margin-right:1em;">
+                            <li>- Billy</li>
+                        </ul>
+                    </td>
+                    <td>31/10/2014</td>
+                    <td>14/11/2014</td>
+                    <td class="noBordersOnButton">
+                        <input type="submit" value="Delete Reservation">
+                        <form method="post" action="editReservation_employee.html">
+                            <input type="submit"  value="Edit Reservation">
+                            <input  id="dialog" title="Billy has some outdated vaccinations" type="button" value="Update Vaccinations" onfocus="onHoverDiag()" onblur="onBlurDiag()">
+                        </form>
+                    </td>                  
+                </tr>
+            </table>
+
+            <h3 style="margin-left:1em;">Unconfirmed Reservations</h3>
+
+            <table style="margin-left:1em;">
+                <tr>
+                    <th>Customer</th>
+                    <th>Pets</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td>Suzy Brooks</td>
+                    <td>
+                        <ul style="list-style-type:none; margin-left:-1em; margin-right:1em;">
+                            <li>- Sammy</li>
+                            <li>- Saul</li>
+                        </ul>
+                    </td>
+                    <td>12/03/2015</td>
+                    <td>14/04/2015</td>
+                    <td class="noBordersOnButton">
+                        <form method="post" action="employee-welcome_confirmedSuzyAndJimDeleted.html">         
+                            <input type="submit" value="Confirm Reservation" onclick="">
+                        </form>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
