@@ -51,7 +51,7 @@
     </ul><br/><br/>
     
     <div id="content">
-    	<h1 style="text-align:center; padding-top:0.5em;">Edit The Reservation</h1>
+    	<h1 style="text-align:center; padding-top:0.5em;">Edit a Reservation</h1>
         <div style="padding-left:1.5em;">
         	<strong>Name:</strong> Jim Bob<br/>
             <strong>Address:</strong> 133 Main St., Ottawa, ON, L7N1C1<br/>
@@ -62,10 +62,10 @@
             <h3>Reservation Information</h3>
             <form action="#" id="petForm">
             	<label>Start Date:</label>
-                <input type="text" class="datepicker" size="9"/><br/>
+                <input type="text" class="datepicker" value="31/10/2014" size="9"/><br/>
                 
                 <label>End Date:</label>
-                <input type="text" class="datepicker" size="9"/><br/><br/>
+                <input type="text" class="datepicker" value="14/11/2014" size="9"/><br/><br/>
                 
                 <div id="accord">
                 	<h3>First Pet</h3>
@@ -75,41 +75,44 @@
                         	<option>-----</option>
                         	<option value="fluffy">Fluffy</option>
                             <option value="charlie">Charlie</option>
-                            <option value="Billy">Billy</option>
+                            <option value="Billy" selected>Billy</option>
                         </select>
                         
                         <span id="alert" style="display:none;" class="ui-state-error"><span class="ui-icon ui-icon-alert" style="display:inline-block"></span> Vaccinations are expired&nbsp;</span>
                         <br/>
                         
                         <label id="specialLbl" class="petLbls">Special Requirements:</label>
-                        <textarea rows="1" form="petForm" class="input"></textarea> (optional)
-                        <br/>
+                        <textarea rows="1" style="width: 274px; height: 44px;" form="petForm" class="input" >Billy likes his water with a slice of lemon.</textarea> (optional)
+                        <br/><br>
                         
-                        <label class="petLbls"><strong>Special Services:</strong></label> (optional)<br/>
+                        <label class="petLbls"><strong>Special Services:</strong></label> (optional)<br/><br>
                         
                         <label class="chbx">Walks</label>
-                        <input type="checkbox" onclick="enableDisable('#walkNum')"/>
-                        <input type="number" id="walkNum" disabled style="width:2em;"/> | $2.00/walk: small dog<br/>
+                        <input type="checkbox" checked/>
+                        <input type="number" id="walkNum" value="2" style="width:2em;"/> | $2.00/walk: small dog<br/>
 
                         <label class="chbx">Grooming</label>
-                        <input type="checkbox" onclick="enableDisable('#groomNum')"/>
-                        <input type="number" disabled id="groomNum" style="width:2em;"/> | $2.00/session: small dog<br/>
+                        <input onclick="enableDisable('#groomNum')" type="checkbox" />
+                        <input type="number" id="groomNum" disabled  style="width:2em;"/> | $2.00/session: small dog<br/>
 
                         <label class="chbx" style="margin-top:1em">Medication</label>
-                        <input type="checkbox" onclick="enableDisable('#medNum'); enableDisable('#notes')"/>
-                        <input type="number" id="medNum" disabled style="width:2em;"/> | $1.00/day<br/>
-                        <textarea style="margin-top:0.2em;margin-left:7.5em" rows="1" id="notes" placeholder="Name(s), dosage, and additional notes." disabled></textarea><br/>
+                        <input type="checkbox" checked onclick="enableDisable('#medNum'); enableDisable('#notes')"/>
+                        <input type="number" id="medNum" value="2" style="width:2em;"/> | $1.00/day<br/>
+                        <textarea style="width: 275px; height:44px; margin-top:0.5em;margin-left:10.3em" rows="1" id="notes" placeholder="Name(s), dosage, and additional notes." >Apomorphine, twice a day, directly after meals.</textarea><br/>
+
+                        <label class="chbx">2nd Feeding:</label>
+                        <input checked type="checkbox"/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $2.00/session: small dog<br/>
 
                         <label class="chbx" style="margin-top:0.5em">Playtime</label>
                         <input type="checkbox" onclick="enableDisable('#playNum')"/>
                         <input type="number" disabled id="playNum" style="width:2em;"/> | $2.00/day<br/>
                     </p>
                 </div>
-				
                 <br/>
                 <input type="button" value="Add Pet"/><br/>
                 <br/>
-                <input type="button" onclick="confPopup()" value="Place Reservation" id="sub"/> <a href="#" onClick="clearAll()" style="color:black; border-left: thin solid black; padding-left:0.5em;">Clear Fields</a>
+                <input type="button" onclick="confPopup()" value="Update Reservation" id="sub"/> <a href="#" onClick="clearAll()" style="color:black; border-left: thin solid black; padding-left:0.5em;">Clear Fields</a>
             </form>
 		</div>
     </div>
