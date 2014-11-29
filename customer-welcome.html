@@ -37,7 +37,7 @@
     }
 
     function removePop(){
-        if(confirm("You are about to remove this pet. Are you sure?")){
+        if(confirm("You are about to remove this reservation. Are you sure?")){
             window.location = "customer-welcome_removed reservation.html";
         }
     }
@@ -54,7 +54,7 @@
 
 <body onLoad="accord(); dates();">
     <ul id="MenuBar1" class="MenuBarHorizontal">
-      <li id="item1"><a href="login.html">Home</a></li>
+      <li id="item1"><a href="login.html">Logout</a></li>
       <li id="item2"><a href="#">Info</a></li>
       <li id="item3"><a href="customer-welcome.html">My Account</a></li>
     </ul><br/><br/>
@@ -71,9 +71,10 @@
         	<h3 style="margin-left:1em;">Current Reservations</h3>
             
             <div id="accordion">
-            	<h3>Start Date: 31/10/2014 <span style="border-left:thin solid black; padding-left:0.5em"><input type="button" onclick="window.location='editReservation.html';" value="Edit"/></span></h3>
+            	<h3>Start Date: 31/10/2014 <span style="border-left:thin solid black; padding-left:0.5em"><input type="button" onclick="window.location='editReservation.html';" value="Edit"/></span>
+                <a href="" style="padding-left:0.5em;margin-left:0.3em; border-left:thin solid black;" onclick="removePop();">Delete</a></h3>
                 <div>
-                	<p>End Date: 14/11/2014 <button style="margin-left:1em" onclick="removePop();">Delete</button><br/>
+                	<p>End Date: 14/11/2014<br/>
                     <strong>Pet(s)</strong>
                     	<ul style="margin-left:-2em; list-style-type:none;">
                         	<li>- <u>Fluffy</u></li>
@@ -81,24 +82,21 @@
                             <li>&nbsp;&nbsp;&nbsp; Grooming: 1</li><br/>
                             <li>- <u>Charlie</u></li>
                             <li>&nbsp;&nbsp;&nbsp; Walks: 2</li>
-                            <li>&nbsp;&nbsp;&nbsp; Medication:<br/>
-                            &nbsp;&nbsp;&nbsp;Glucosamine 2x/day at meals</li>
+                            <li>&nbsp;&nbsp;&nbsp; Medication: Glucosamine 2/day at meals</li>
                         </ul>
                     </p>
                 </div>
                 
-                <h3>Start Date: 04/02/2015 <span style="border-left:thin solid black; padding-left:0.5em"><input type="button" value="Edit"/></span></h3>
+                <h3>Start Date: 04/02/2015 <span style="border-left:thin solid black; padding-left:0.5em"><input type="button" value="Edit"/></span>
+                <a href="" style="padding-left:0.5em;margin-left:0.3em; border-left:thin solid black;" onclick="removePop();">Delete</a></h3>
                 <div>
-                	<p>End Date: 28/03/2015 <button style="margin-left:1em">Delete</button><br/>
+                	<p>End Date: 28/03/2015<br/>
                     <strong>Pet(s)</strong>
                     	<ul class="petUL" style="margin-left:-2em; list-style-type:none;">
-                        	<li>- Fluffy</li>
-                            <li>- Charlie</li>
-                        </ul>
-                        <strong>Services</strong>
-                         <ul style="margin-left:-2em; list-style-type:none;">
-                            <li>- Walks: 1</li>
-                            <li>- Grooming: 1</li>
+                        	<li>- <u>Fluffy</u></li>
+                            <li>&nbsp;&nbsp;&nbsp; Walks: 1</li>
+                            <li>- <u>Charlie</u></li>
+                            <li>&nbsp;&nbsp;&nbsp; Grooming: 1</li>
                         </ul>
                     </p>
                 </div>
@@ -131,7 +129,9 @@
                     <strong>Name:</strong> Dr. Jimmy John<br/>
                     <strong>Phone:</strong> 613-321-5522<br/>
                     
-                    <span style="display:block; margin-top:12.5em;">
+                    <img src="images/dog.jpg" height:"287" width="198" id="dogImg"/>
+
+                    <span style="display:block; margin-top:1em;">
                         <input type="button" value="Edit" onClick = "window.location.href='customer-editPetInfo.html'"/>
                         <a id="delPet" href="#" style="padding-left:0.5em; border-left:thin solid black; text-decoration:none;" onclick="popup();">Delete Pet</a>
                     </span>
@@ -149,7 +149,7 @@
                     <span class="nameAlign"><strong>Size:</strong></span> Medium<br/>
                     <span class="nameAlign"><strong>Food:</strong></span> Pedigree<br/>
                     <br/>
-                    <strong style="font-size:22px">Vaccination Expiry Dates</strong><br/>
+                    <span style="display:inline-block; width:30em"><strong style="font-size:22px">Vaccination Expiry Dates</strong></span><br/>
                     <span class="vaccAlign">Bordetella:</span> 05/15/2017<br/>
                     <span class="vaccAlign">Distemper:</span> 01/02/2016<br/>
                     <span class="vaccAlign">Hepatitis:</span> 03/15/2016<br/>
@@ -172,6 +172,8 @@
 
                 <h3>New Pet</h3>
                 <form action="customer-welcome_newPet.html" method="get">
+                <span style="float:right"><strong style="font-size:20px;">Pet Photo</strong><br/>
+                    <input type="file"/></span>
                 <strong style="font-size:20px">Customer Information</strong><br/>
                     <label class="lblAlign">Name:</label>
                     <input type="text"/><br/>

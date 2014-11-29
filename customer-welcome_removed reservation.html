@@ -42,7 +42,7 @@
 
 <body onLoad="accord()">
     <ul id="MenuBar1" class="MenuBarHorizontal">
-      <li id="item1"><a href="login.html">Home</a></li>
+      <li id="item1"><a href="login.html">Logout</a></li>
       <li id="item2"><a href="#">Info</a></li>
       <li id="item3"><a href="customer-welcome.html">My Account</a></li>
     </ul><br/><br/>
@@ -56,13 +56,14 @@
         </div>
         
         <div id="reservations" style="margin-bottom:1em;">
-        	<h3 style="margin-left:1em;">Current Reservations:</h3>
+        	<h3 style="margin-left:1em;">Current Reservations</h3>
             
             <div id="accordion">
                 
-                <h3>Start Date: 04/02/2015 <span style="border-left:thin solid black; padding-left:0.5em"><input type="button" value="Edit"/></span></h3>
+                <h3>Start Date: 04/02/2015 <span style="border-left:thin solid black; padding-left:0.5em"><input type="button" value="Edit"/></span>
+                <a href="#" style="padding-left:0.5em;margin-left:0.3em; border-left:thin solid black;" onclick="removePop();">Delete</a></h3>
                 <div>
-                	<p>End Date: 28/03/2015 <button style="margin-left:1em">Delete</button><br/>
+                	<p>End Date: 28/03/2015<br/>
                     <strong>Pet(s):</strong>
                     	<ul class="petUL" style="margin-left:-2em; list-style-type:none;">
                         	<li>- Fluffy</li>
