@@ -14,6 +14,17 @@ img{
 	margin-left:2em;
 }
 
+#addP{
+	color:black;
+	text-decoration: none;
+	border-left: thin solid black;
+	padding-left:0.5em;
+}
+
+#addP:hover{
+	text-decoration: underline;
+}
+
 #accord p label{
 	margin-left:-1em;
 }
