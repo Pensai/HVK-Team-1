@@ -172,7 +172,7 @@
 
                 <h3>New Pet</h3>
                 <form action="customer-welcome_newPet.html" method="get">
-                <span style="float:right"><strong style="font-size:20px;">Pet Photo</strong><br/>
+                <span style="float:right"><strong style="font-size:20px;">Pet Photo</strong> <span style="font-size:17px">(optional)</span><br/>
                     <input type="file"/></span>
                 <strong style="font-size:20px">Customer Information</strong><br/>
                     <label class="lblAlign">Name:</label>
@@ -194,7 +194,7 @@
                     <input type="checkbox"/><br/>
                     
                     <label class="lblAlign">Birth Date:</label>
-                    <input type="text" class="date" size="10"/><br/>
+                    <input type="text" size="10" placeholder="MM/YYYY"/><br/>
                     
                     <label class="lblAlign">Size:</label>
                     <select>
@@ -243,15 +243,13 @@
                     <label class="lblAlign">Phone:</label>
                     <input type="text" size="2" title="Ex.:513-555-4321"/>-<input type="text" size="2" title="Ex.:513-555-4321"/>-<input type="text" size="3" title="Ex.:513-555-4321"/><br/>
                     
-                    <input type="submit" value="Add Pet" style="margin-left:7.1em;"/>
+                    <input type="submit" value="Add Pet" style="margin-left:7.1em; margin-top:0.5em"/>
                 </form>
         </div>
         <form id="actions" action="makeReservation.html" method="get" style="display:inline;">
         	<input type="submit" value="Make Reservation"/>
         </form>
-        <form action="editAccount.html" style="display:inline" >
-        	<input type="submit" value="Edit Account"/>
-        </form>
+        <a href="editAccount.html" id="editAc">Edit Account</a>
     </div>
 </body>
 </html>
