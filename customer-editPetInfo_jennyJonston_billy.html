@@ -35,7 +35,7 @@ $(document).ready(function(){
 
 <body>
     <ul id="MenuBar1" class="MenuBarHorizontal">
-      <li id="item1"><a href="login.html">Home</a></li>
+      <li id="item1"><a href="login.html">Logout</a></li>
       <li id="item2"><a href="#">Info</a></li>
       <li id="item3"><a href="login.html">Login</a></li>
     </ul><br/><br/>
@@ -44,78 +44,30 @@ $(document).ready(function(){
 	
 	<h1 style="text-align:center; padding-top:0.5em;">Edit Billy</h1>
                 <form action="#" method="get">
-				  <fieldset>
-					<legend><strong style="font-size:17px">Customer Information</strong></legend>
-             
-                    <label class="lblAlign">Name:</label>
-                    <input type="text" value="Billy"/><br/>
-                  
-                    <label class="lblAlign">Pet Type:</label>
-                    <select>
-                        <option>Dog</option>
-                        <option>Cat</option>
-                    </select><br/>
-                    
-                    <label class="lblAlign">Fixed:</label>
-                    <input type="checkbox" checked/><br/>
-                    
-                    <label class="lblAlign">Birth Date:</label>
-                    <input type="text" class="date" size="10" value="10/31/2010"/><br/>
-                    
-                    <label class="lblAlign">Size:</label>
-                    <select>
-                        <option>Small</option>
-                        <option>Medium</option>
-                        <option>Large</option>
-                    </select><br/>
-                    
-                    <label class="lblAlign">Food:</label>
-                    <select id="food" value="Pedigree">
-                        <option>Pedigree</option>
-                        <option>Blackwood</option>
-                        <option>Dogswell</option>
-                        <option>Happy Paws</option>
-                        <option>Natural Balance</option>
-                        <option>Pedigree</option>
-                    </select><br/>
-
-                    <label class="lblAlign">Own Food:</label>
-                    <input type="checkbox" onclick="disableEnable()"/><br/>
-                </fieldset>
+				  
 					
-					
-					  <fieldset>
+					  <fieldset style="width: 35%; margin-left:auto; margin-right: auto;">
 					<legend><strong style="font-size:17px">Vaccination Expiry Dates</strong></legend>
                     
                     <label class="lblAlign">Bordetella:</label>
-                    <input type="text" class="date" size="10" value="05/15/2017"/></br>
+                    <input style="box-shadow:0 0 3px 2px #47E64C; padding-top: 2px;" type="text" class="date" size="10" value="05/15/2017"/></br>
                     
                     <label class="lblAlign">Distemper:</label>
-                    <input type="text" class="date" size="10" value="01/02/2016"/></br>
+                    <input style="box-shadow:0 0 3px 2px #47E64C; padding-top: 2px;" type="text" class="date" size="10" value="01/02/2016"/></br>
                     
                     <label class="lblAlign" >Hepatitis:</label>
-                    <input style="box-shadow:0 0 10px 5px #900" type="text" id="hep" class="date" size="10" value="03/15/2013"/></br>
+                    <input style="box-shadow:0 0 3px 3px #900; padding-top: 2px;" type="text" id="hep" class="date" size="10" value="03/15/2013"/></br>
                     
                     <label class="lblAlign">Parainfuenza:</label>
-                    <input type="text" class="date" size="10" value="03/20/2015"/></br>
+                    <input style="box-shadow:0 0 3px 2px #47E64C; padding-top: 2px;" type="text" class="date" size="10" value="03/20/2015"/></br>
                     
                     <label class="lblAlign">Parvovirus:</label>
-                    <input type="text" class="date" size="10" value="31/12/2014"/></br>
+                    <input style="box-shadow:0 0 3px 2px #47E64C; padding-top: 2px;" type="text" class="date" size="10" value="31/12/2014"/></br>
                     
                     <label class="lblAlign">Rabies:</label>
-                    <input type="text" class="date" size="10" value="01/01/2016"/></br>
+                    <input style="box-shadow:0 0 3px 2px #47E64C; padding-top: 2px;" type="text" class="date" size="10" value="01/01/2016"/></br>
                     </fieldset>
 					
-					
-					<fieldset>
-					<legend><strong style="font-size:17px">Vet Information</strong></legend>
-                    <br/>
-                    <label class="lblAlign">Name:</label>
-                    <input type="text" value="Dr. Jimmy John"/><br/>
-                    
-                    <label class="lblAlign">Phone:</label>
-                    <input type="text" size="2" value="613"/>-<input type="text" size="2" value="321"/>-<input type="text" size="3" value="5522" /><br/>
-                     </fieldset>
                     <input type="submit" onclick="confPopup()" value="Submit" style="margin-left:7.1em;"/>&nbsp&nbsp &nbsp &nbsp&nbsp<a style="text-decoration:underline;">Cancel</a>
 					
                 </form>
