@@ -11,11 +11,6 @@
 <script type="text/javascript" src="scripts/jquery-ui.js"></script>
 
 <script type="text/javascript">
-
-$(function() {
-	$("#pick").datepicker();	
-});
-
 function placeRes(){
 	alert("Saul and Sammy have been assigned to run 1 from Dec 5 to Dec 7 2014");
 	
@@ -41,8 +36,12 @@ function placeRes(){
     
     <h1 style="text-align: center">Runs</h1>
 		<form action="run1.html" method="get">
-        	<label for="search" style="margin-left: 15%">Enter date: </label>
-       	  <input name="search" type="text" id="pick">
+        	<label for="search" style="margin-left: 15%">Select pet: </label>
+       	  <select>
+          <option value="default">---Choose---</option>
+          	<option value="SaulSammy">Saul & Sammy</option>
+            
+          </select>
                 <input type="submit" value="Search">
         	
         </form>
