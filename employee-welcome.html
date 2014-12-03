@@ -85,12 +85,13 @@ function onMouseOutDialog()
                     </td>
                     <td>31/10/2014</td>
                     <td>14/11/2014</td>
-                    <td class="noBordersOnButton">
-                            <button onclick="checkDeleteRes()">Delete Reservation</button>
-                        <form method="post" action="editReservation_employee.html">
-                            <input type="submit"  value="Edit Reservation">
+                    <td class="noBordersOnButton" style="">
+                    <form  method="post" action="editReservation_employee.html">
+                            <button style="width: 5em;" onclick="checkDeleteRes()">Delete</button>
+                        
+                            <input type="submit" style="width: 5em;"  value="Edit">
                         </form>
-                        <input type="submit" value="Update Vaccinations">
+                        <input type="submit" style="width: 10.4em; margin-top:2%; " value="Update Vaccinations">
                     </td>
                 </tr>
                 <tr>
@@ -103,14 +104,16 @@ function onMouseOutDialog()
                     <td>31/10/2014</td>
                     <td>14/11/2014</td>
                     <td class="noBordersOnButton">
-                        <input type="submit" value="Delete Reservation">
+                        
                         <form method="post" action="editReservation_employee.html">
-                            <input type="submit"  value="Edit Reservation">
-                            
+                            <input type="submit" style="width: 5em;" value="Delete">
+                                <input type="submit" style="width: 5em;"  value="Edit">
                         </form>
+
                         <form method="post" action="customer-editPetInfo_jennyJonston_billy.html">
-                            <input type="submit" onmouseover="onClickDialog()" onmouseout="onMouseOutDialog()" id="vaccinations" value="Update Vaccination">
+                            <input style="width: 10.4em; margin-top:2%; " type="submit" onmouseover="onClickDialog()" onmouseout="onMouseOutDialog()" id="vaccinations" value="Update Vaccination">
                         </form>
+
                         <div id="dialog" title="Vaccinations">
                             <p>Billy's Hepatitis Vaccination is out of date.</p>
                         </div>
@@ -139,7 +142,7 @@ function onMouseOutDialog()
                     <td style="text-align: center;">12/03/2015</td>
                     <td style="text-align: center;">14/04/2015</td>
                     <td class="noBordersOnButton">                    
-                        <input style="" type="submit" value="Confirm Reservation" onclick="">
+                        <input style="margin-right: 8%;" type="submit" value="Confirm" onclick="">
                     </td>
                 </tr>
             </table>
