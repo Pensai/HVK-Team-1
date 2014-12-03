@@ -21,7 +21,10 @@ function checkDeleteRes()
         window.location = "employee-welcome_JimBobDeleted.html";
     }
 }
-
+function editCustomerEmp()
+{
+	window.location = "editReservation_employee.html";
+}
 function dialog()
 {
     $("#dialog").dialog({autoOpen: false});
@@ -86,10 +89,10 @@ function onMouseOutDialog()
                     <td>31/10/2014</td>
                     <td>14/11/2014</td>
                     <td class="noBordersOnButton" style="">
-                    <form  method="post" action="editReservation_employee.html">
+                    <form>
                             <button style="width: 5em;" onclick="checkDeleteRes()">Delete</button>
-                        
-                            <input type="submit" style="width: 5em;"  value="Edit">
+            
+                            <button style="width: 5em;" onclick="editCustomerEmp()">Edit</button>
                         </form>
                         <input type="submit" style="width: 10.4em; margin-top:2%; " value="Update Vaccinations">
                     </td>
