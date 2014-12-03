@@ -12,39 +12,29 @@
 
 <script type="text/javascript">
 
-
-function onHoverDiag()
+function dialog()
 {
-    $dogument.ready(function {
-        $('#dialog').dialog("open");
-    });
+    $("#dialog").dialog({autoOpen: false});
 }
 
-function onBlurDiag()
+function onClickDialog()
 {
-    $dogument.ready(function {
-        $('#dialog').dialog("close");
-    });
+    $("#dialog").dialog("open");
 }
 
-
-// $(document).ready(function {
-//     $('#dialog').hover(function {
-//         $('#dialog').dialog({ autoOpen: false });
-//     });
-   
-         
-// });
-// $(function () {
-//     $(document).tooltip();
-// });
+function onMouseOutDialog()
+{
+    $("#dialog").dialog("close");
+}
+ 
+}
     
 </script>
 
 </script>
 </head>
 
-<body>
+<body onLoad="dialog()">
     <ul id="MenuBar1" class="MenuBarHorizontal">
       <li id="item1"><a href="login.html">Home</a></li>
       <li id="item2"><a href="#">Info</a></li>
@@ -122,8 +112,16 @@ function onBlurDiag()
                             <input type="submit" style="width: 5.2em;" value="Delete">
                         
                             <input type="submit" style="width: 5em;" value="Edit">
-                            <input  id="dialog" title="Billy has some outdated vaccinations" type="button" style="margin-top: 1%;" value="Update Vaccination" onfocus="onHoverDiag()" onblur="onBlurDiag()">
+
                         </form>
+
+                        <form method="post" action="customer-editPetInfo_jennyJonston_billy.html">
+                            <input style="width: 10.4em; margin-top:2%; " type="submit" onmouseover="onClickDialog()" onmouseout="onMouseOutDialog()" id="vaccinations" value="Update Vaccination">
+                        </form>
+
+                        <div id="dialog" title="Vaccinations">
+                            <p>Billy's Hepatitis Vaccination is out of date.</p>
+                        </div>
                     </td>                  
                 </tr>
             </table>
@@ -142,7 +140,7 @@ function onBlurDiag()
                     <td style="text-align: center; ">Jilly Parker</td>
                     <td style="width: 8em;">
                         <ul style="list-style-type:none; margin-left:-1em; margin-right:1em;">
-                            <li>- Bronson</li>
+                            <li>- Kate</li>
                         </ul>
                     </td>
                     <td>31/10/2014</td>
@@ -151,7 +149,11 @@ function onBlurDiag()
                         <form method="post" action="editReservation_employee.html">
                             <input type="submit" style="width: 5em; margin-left: 8%;" value="Delete">
                             <input type="submit" style="width: 5em;" value="Edit">
-                            <input   id="dialog" style="width: 10.4em; margin-top: 2%; margin-left: 8%;" title="Billy has some outdated vaccinations" type="button" value="Update Vaccinations" onfocus="onHoverDiag()" onblur="onBlurDiag()">
+                            <input style="width: 10.4em; margin-top: 2%; margin-left: 8%;" type="button" value="Update Vaccinations">
+                        </form>
+                        <form method="get" action="invoice.html">
+                            <input type="submit" style="margin-left: 8%; width: 10.4em; margin-top: 2%;" onclick="callInvoice()" value="Generate Invoice">
+            
                         </form>
                     </td>                  
                 </tr>

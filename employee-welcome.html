@@ -179,7 +179,11 @@ function onMouseOutDialog()
                         <form method="post" action="editReservation_employee.html">
                             <input type="submit" style="width: 5em; margin-left: 8%;" value="Delete">
                             <input type="submit" style="width: 5em;" value="Edit">
-                            <input   id="dialog" style="width: 10.4em; margin-top: 2%; margin-left: 8%;" title="Billy has some outdated vaccinations" type="button" value="Update Vaccinations" onfocus="onHoverDiag()" onblur="onBlurDiag()">
+                            <input style="width: 10.4em; margin-top: 2%; margin-left: 8%;" type="button" value="Update Vaccinations" onfocus="onHoverDiag()" onblur="onBlurDiag()">
+                        </form>
+                                                <form method="get" action="invoice.html">
+                            <input type="submit" style="margin-left: 8%; width: 10.4em; margin-top: 2%;" onclick="callInvoice()" value="Generate Invoice">
+            
                         </form>
                     </td>                  
                 </tr>

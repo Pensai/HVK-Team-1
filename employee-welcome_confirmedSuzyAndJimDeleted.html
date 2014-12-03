@@ -26,16 +26,11 @@ function onBlurDiag()
         $('#dialog').dialog("close");
     });
 }
-// $(document).ready(function {
-//     $('#dialog').hover(function {
-//         $('#dialog').dialog({ autoOpen: false });
-//     });
-   
-         
-// });
-// $(function () {
-//     $(document).tooltip();
-// });
+
+function callInvoice()
+{
+    window.location = "invoice.html";
+}
     
 </script>
 
@@ -130,8 +125,12 @@ function onBlurDiag()
                         <form method="post" action="editReservation_employee.html">
                             <input type="submit" style="width: 5em; margin-left: 8%;" value="Delete">
                             <input type="submit" style="width: 5em;" value="Edit">
-                            <input   id="dialog" style="width: 10.4em; margin-top: 2%; margin-left: 8%;" title="Billy has some outdated vaccinations" type="button" value="Update Vaccinations" onfocus="onHoverDiag()" onblur="onBlurDiag()">
-                            <input style="margin-left: 8%; width: 10.4em; margin-top: 2%;" type="button" value="Generate Invoice">
+                            <input type="button" id="dialog" style="width: 10.4em; margin-top: 2%; margin-left: 8%;"   value="Update Vaccinations" >
+                            
+                        </form>
+                        <form method="get" action="invoice.html">
+                            <input type="submit" style="margin-left: 8%; width: 10.4em; margin-top: 2%;" onclick="callInvoice()" value="Generate Invoice">
+            
                         </form>
                     </td>                  
                 </tr>
