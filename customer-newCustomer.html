@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HVK -- Welcome</title>
+<link href="styles/customer-welcome.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="styles/jquery-ui/jquery-ui.css">
+<link href="styles/SpryAssets/SpryMenuBarHorizontal.css" rel="stylesheet" type="text/css">
+
+<script src="styles/SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
+<script type="text/javascript" src="scripts/jquery.js"></script>
+<script type="text/javascript" src="scripts/jquery-ui.js"></script>
+
+<script type="text/javascript">
+	function accord(){
+		$('#accordion').accordion({
+			collapsible: true,
+			active: false
+		});
+
+        $("#accord").accordion({
+            collapsible: true,
+            active: false
+        });
+
+        $(document).tooltip();
+	}
+
+    function dates(){
+        $('.date').datepicker();
+    }
+
+    function popup(){
+        if(confirm("You are about to remove this pet. Are you sure?")){
+            window.location = "customer-welcomeNoPets.html";
+        }
+    }
+
+    function removePop(){
+        if(confirm("You are about to remove this reservation. Are you sure?")){
+            window.location = "customer-welcome_removed reservation.html";
+        }
+    }
+
+    function disableEnable(){
+        if($('#food').is(":disabled")){
+            $('#food').prop("disabled", false);
+        }else{
+            $('#food').prop("disabled", true);
+        }
+    }
+</script>
+</head>
+
+<body onLoad="accord(); dates();">
+    <ul id="MenuBar1" class="MenuBarHorizontal">
+      <li id="item1"><a href="login.html">Logout</a></li>
+      <li id="item2"><a href="#">Info</a></li>
+      <li id="item3"><a href="customer-welcome.html">My Account</a></li>
+    </ul><br/><br/>
+    
+    <div id="content">
+    	<h2 style="text-align:center; padding-top:0.5em;">Welcome to Happy Valley Kennels</h2>
+    	<div style="padding-left:1.5em;">
+        	<span class="nameAlign"><strong>Name:</strong></span> Kevin Bacon<br/>
+            <span class="nameAlign"><strong>Address:</strong></span> 133 Main St., Ottawa, ON, L7N1C1<br/>
+            <span class="nameAlign"><strong>Phone:</strong></span> 613-123-1234
+        </div>
+        
+        <div id="reservations" style="margin-bottom:1em;">
+        	<h3 style="margin-left:1em;">Current Reservations</h3>
+            
+            <div id="accordion">
+            </div>
+        </div>
+
+        <h3 style="margin-left:1em;">My Pets</h3>
+        <div id="accord" style="margin-left:1em; margin-right:1.2em; margin-bottom:1em;">
+
+                
+
+                <h3>New Pet</h3>
+                <form action="customer-welcome_newPet.html" method="get">
+                <span style="float:right"><strong style="font-size:20px;">Pet Photo</strong> <span style="font-size:17px">(optional)</span><br/>
+                    <input type="file"/></span>
+                <strong style="font-size:20px">Customer Information</strong><br/>
+                    <label class="lblAlign">Name:</label>
+                    <input type="text"/><br/>
+                    
+                    <label class="lblAlign">Pet Type:</label>
+                    <select>
+                        <option>Dog</option>
+                        <option>Cat</option>
+                    </select><br/>
+
+                    <label class="lblAlign">Gender:</label>
+                    <input type="radio" name="gender" id="f"><label for="f">Female</label><br/>
+                    <label style="margin-left:7.15em"></label><input type="radio" id="m" name="gender"><label for="m">Male</label><br/>
+
+                    <label class="lblAlign">Fixed:</label>
+                    <input type="checkbox"/><br/>
+                    
+                    <label class="lblAlign">Birth Date:</label>
+                    <input type="text" size="10" placeholder="MM/YYYY"/><br/>
+                    
+                    <label class="lblAlign">Size:</label>
+                    <select>
+                        <option>Small</option>
+                        <option>Medium</option>
+                        <option>Large</option>
+                    </select><br/>
+                    
+                    <label class="lblAlign">Food:</label>
+                    <select id="food">
+                        <option>------------------</option>
+                        <option>Blackwood</option>
+                        <option>Dogswell</option>
+                        <option>Happy Paws</option>
+                        <option>Natural Balance</option>
+                        <option>Pedigree</option>
+                    </select><br/>
+
+                    <label class="lblAlign">Own Food:</label>
+                    <input type="checkbox" onclick="disableEnable()"/><br/>
+                    
+                    <span style="display:block; width:30em"><strong style="font-size:20px;">Vaccination Expiry Dates</strong></span><br/>
+                    
+                    <label class="lblAlign">Bordetella:</label>
+                    <input type="text" class="date" size="10"/></br>
+                    
+                    <label class="lblAlign">Distemper:</label>
+                    <input type="text" class="date" size="10"/></br>
+                    
+                    <label class="lblAlign">Hepatitis:</label>
+                    <input type="text" class="date" size="10"/></br>
+                    
+                    <label class="lblAlign">Parainfuenza:</label>
+                    <input type="text" class="date" size="10"/></br>
+                    
+                    <label class="lblAlign">Parvovirus:</label>
+                    <input type="text" class="date" size="10"/></br>
+                    
+                    <label class="lblAlign">Rabies:</label>
+                    <input type="text" class="date" size="10"/></br>
+                    
+                    <strong style="font-size:20px">Vet Information</strong><br/>
+                    <label class="lblAlign">Name:</label>
+                    <input type="text"/><br/>
+                    
+                    <label class="lblAlign">Phone:</label>
+                    <input type="text" size="2" title="Ex.:513-555-4321"/>-<input type="text" size="2" title="Ex.:513-555-4321"/>-<input type="text" size="3" title="Ex.:513-555-4321"/><br/>
+                    
+                    <input type="submit" value="Add Pet" style="margin-left:7.1em; margin-top:0.5em"/>
+                </form>
+        </div>
+        <form id="actions" action="makeReservation.html" method="get" style="display:inline;">
+        	<input type="submit" value="Make Reservation"/>
+        </form>
+        <a href="editAccount.html" id="editAc">Edit Account</a>
+    </div>
+</body>
+</html>
