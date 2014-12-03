@@ -64,6 +64,9 @@ function onBlurDiag()
                 <input type="text" placeholder="Enter a Name, Email, or Phone Number" size="32"/>
                 <input id="sub" type="submit" value="Search"/>
             </form>
+            <form method="get" action="KennelLog.html">
+                <button style="margin-left: 53.3%; margin-top: 5px;" type="submit">View Kennel Log</button>
+            </form>
         </div>
         <div id="reservations">
 
@@ -107,14 +110,14 @@ function onBlurDiag()
 
                 <tr>
                     <td style="text-align: center;">Jenny Johnston</td>
-                    <td style="width: 15%;">
+                    <td style="width: 7em;">
                         <ul style="list-style-type:none; margin-left:-1em; margin-right:1em;">
                             <li>- Billy</li>
                         </ul>
                     </td>
                     <td>31/10/2014</td>
                     <td>14/11/2014</td>
-                    <td style="padding-left: 6%;" class="noBordersOnButton">
+                    <td style="padding-left: 4%; width: 12em;" class="noBordersOnButton">
                         <form method="post" action="editReservation_employee.html">
                             <input type="submit" style="width: 5.2em;" value="Delete">
                         
@@ -126,6 +129,34 @@ function onBlurDiag()
             </table>
 
             <h3 style="margin-left:1em;">Reservations Ending Today</h3>
+            <table id="reservationTable">
+                <tr>
+                    <th>Customer</th>
+                    <th>Pets</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Action</th>
+                </tr>
+
+                <tr>
+                    <td style="text-align: center; ">Jilly Parker</td>
+                    <td style="width: 8em;">
+                        <ul style="list-style-type:none; margin-left:-1em; margin-right:1em;">
+                            <li>- Bronson</li>
+                        </ul>
+                    </td>
+                    <td>31/10/2014</td>
+                    <td>14/11/2014</td>
+                    <td style="width: 12em;" class="noBordersOnButton">
+                        <form method="post" action="editReservation_employee.html">
+                            <input type="submit" style="width: 5em; margin-left: 8%;" value="Delete">
+                            <input type="submit" style="width: 5em;" value="Edit">
+                            <input   id="dialog" style="width: 10.4em; margin-top: 2%; margin-left: 8%;" title="Billy has some outdated vaccinations" type="button" value="Update Vaccinations" onfocus="onHoverDiag()" onblur="onBlurDiag()">
+                        </form>
+                    </td>                  
+                </tr>
+            </table>
+
         </div>
     </div>
 </body>
