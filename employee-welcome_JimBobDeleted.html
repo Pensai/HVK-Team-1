@@ -66,7 +66,36 @@ function onBlurDiag()
             </form>
         </div>
         <div id="reservations">
-        <h3 style="margin-left:1em;">Today's Reservations</h3>
+
+<h3 style="margin-left:1em;">Unconfirmed Reservations</h3>
+
+            <table style="margin-left:1em;">
+                <tr>
+                    <th>Customer</th>
+                    <th>Pets</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">Suzy Brooks</td>
+                    <td>
+                        <ul style="list-style-type:none; margin-left:-1em; margin-right:1em;">
+                            <li>- Sammy</li>
+                            <li>- Saul</li>
+                        </ul>
+                    </td>
+                    <td>12/03/2015</td>
+                    <td>14/04/2015</td>
+                    <td style="padding-left: 2%;">
+                        <form method="post" action="employee-welcome_confirmedSuzyAndJimDeleted.html">         
+                            <input type="submit" value="Confirm" onclick="">
+                        </form>
+                    </td>
+                </tr>
+            </table>
+
+        <h3 style="margin-left:1em;">Reservations Starting Today</h3>
             <table id="reservationTable">
                 <tr>
                     <th>Customer</th>
@@ -77,7 +106,7 @@ function onBlurDiag()
                 </tr>
 
                 <tr>
-                    <td>Jenny Johnston</td>
+                    <td style="text-align: center;">Jenny Johnston</td>
                     <td style="width: 15%;">
                         <ul style="list-style-type:none; margin-left:-1em; margin-right:1em;">
                             <li>- Billy</li>
@@ -96,33 +125,7 @@ function onBlurDiag()
                 </tr>
             </table>
 
-            <h3 style="margin-left:1em;">Unconfirmed Reservations</h3>
-
-            <table style="margin-left:1em;">
-                <tr>
-                    <th>Customer</th>
-                    <th>Pets</th>
-                    <th>Start Date</th>
-                    <th>End Date</th>
-                    <th>Action</th>
-                </tr>
-                <tr>
-                    <td>Suzy Brooks</td>
-                    <td>
-                        <ul style="list-style-type:none; margin-left:-1em; margin-right:1em;">
-                            <li>- Sammy</li>
-                            <li>- Saul</li>
-                        </ul>
-                    </td>
-                    <td>12/03/2015</td>
-                    <td>14/04/2015</td>
-                    <td style="padding-left: 2%;">
-                        <form method="post" action="employee-welcome_confirmedSuzyAndJimDeleted.html">         
-                            <input type="submit" value="Confirm" onclick="">
-                        </form>
-                    </td>
-                </tr>
-            </table>
+            <h3 style="margin-left:1em;">Reservations Ending Today</h3>
         </div>
     </div>
 </body>
