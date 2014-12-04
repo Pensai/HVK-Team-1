@@ -40,6 +40,11 @@ function onMouseOutDialog()
     $("#dialog").dialog("close");
 }
 
+function genInvoice()
+{
+	window.location = "";
+}
+
 </script>
 
 </script>
@@ -126,7 +131,8 @@ function onMouseOutDialog()
             
                             <button style="width: 5em;" onclick="editCustomerEmp()">Edit</button>
                         
-                        <input type="submit" style="width: 10.4em; margin-top:2%; " value="Update Vaccinations">
+                        <input type="submit" style="width: 10.4em; margin-top:2%; " value="Confirm Vaccinations">
+						<input type="submit" style="width: 10.4em; margin-top:2%; " value="Generate Invoice">
                     </td>
                 </tr>
                 <tr>
@@ -146,9 +152,9 @@ function onMouseOutDialog()
                         </form>
 
                         <form method="post" action="customer-editPetInfo_jennyJonston_billy.html">
-                            <input style="width: 10.4em; margin-top:2%; " type="submit" onmouseover="onClickDialog()" onmouseout="onMouseOutDialog()" id="vaccinations" value="Update Vaccination">
+                            <input style="width: 10.4em; margin-top:2%; " type="submit" onmouseover="onClickDialog()" onmouseout="onMouseOutDialog()" id="vaccinations" value="Confirm Vaccination">
                         </form>
-
+						<input onclick="genInvoice()" type="submit" style="width: 10.4em; margin-top:2%; " value="Generate Invoice">
                         <div id="dialog" title="Vaccinations">
                             <p>Billy's Hepatitis Vaccination is out of date.</p>
                         </div>
@@ -179,7 +185,7 @@ function onMouseOutDialog()
                         <form method="post" action="editReservation_employee.html">
                             <input type="submit" style="width: 5em; margin-left: 8%;" value="Delete">
                             <input type="submit" style="width: 5em;" value="Edit">
-                            <input style="width: 10.4em; margin-top: 2%; margin-left: 8%;" type="button" value="Update Vaccinations" onfocus="onHoverDiag()" onblur="onBlurDiag()">
+                            <input style="width: 10.4em; margin-top: 2%; margin-left: 8%;" type="button" value="Confirm Vaccinations" onfocus="onHoverDiag()" onblur="onBlurDiag()">
                         </form>
                                                 <form method="get" action="invoice.html">
                             <input type="submit" style="margin-left: 8%; width: 10.4em; margin-top: 2%;" onclick="callInvoice()" value="Generate Invoice">
