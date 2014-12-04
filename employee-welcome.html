@@ -42,7 +42,12 @@ function onMouseOutDialog()
 
 function genInvoice()
 {
-	window.location = "";
+    window.location = "invoice.html";
+}
+
+function genContract()
+{
+    window.location = "";
 }
 
 </script>
@@ -133,7 +138,7 @@ function genInvoice()
                             <button style="width: 5em;" onclick="editCustomerEmp()">Edit</button>
                         
                         <input type="submit" style="width: 10.4em; margin-top:2%; " value="Confirm Vaccinations">
-						<input type="submit" style="width: 10.4em; margin-top:2%; " value="Generate Invoice">
+						<input type="submit" style="width: 10.4em; margin-top:2%; " value="Generate Contract">
                     </td>
                 </tr>
                 <tr>
@@ -155,7 +160,7 @@ function genInvoice()
                         <form method="post" action="customer-editPetInfo_jennyJonston_billy.html">
                             <input style="width: 10.4em; margin-top:2%; " type="submit" onmouseover="onClickDialog()" onmouseout="onMouseOutDialog()" id="vaccinations" value="Confirm Vaccination">
                         </form>
-						<input onclick="genInvoice()" type="submit" style="width: 10.4em; margin-top:2%; " value="Generate Invoice">
+						<input onclick="genContract()" type="submit" style="width: 10.4em; margin-top:2%; " value="Generate Contract">
                         <div id="dialog" title="Vaccinations">
                             <p>Billy's Hepatitis Vaccination is out of date.</p>
                         </div>
@@ -188,10 +193,10 @@ function genInvoice()
                             <input type="submit" style="width: 5em;" value="Edit">
                             <input style="width: 10.4em; margin-top: 2%; margin-left: 8%;" type="button" value="Confirm Vaccinations" onfocus="onHoverDiag()" onblur="onBlurDiag()">
                         </form>
-                                                <form method="get" action="invoice.html">
-                            <input type="submit" style="margin-left: 8%; width: 10.4em; margin-top: 2%;" onclick="callInvoice()" value="Generate Invoice">
+                                                
+                            <input type="submit" style="margin-left: 8%; width: 10.4em; margin-top: 2%;" onclick="genInvoice()" value="Generate Invoice">
             
-                        </form>
+                        
                     </td>                  
                 </tr>
             </table>

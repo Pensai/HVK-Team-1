@@ -14,7 +14,12 @@
 
 function genInvoice()
 {
-	window.location = "";
+    window.location = "invoice.html";
+}
+
+function genContract()
+{
+    window.location = "";
 }
 
 
@@ -32,13 +37,7 @@ function onBlurDiag()
     });
 }
 
-function callInvoice()
-{
-    window.location = "invoice.html";
-}
     
-</script>
-
 </script>
 </head>
 
@@ -103,7 +102,7 @@ function callInvoice()
                             <input type="submit" style="width: 5em;" value="Edit">
                             <input   id="dialog" style="width: 10.4em; margin-top: 2%; margin-left: 8%;" title="Billy has some outdated vaccinations" type="button" value="Confirm Vaccinations" onfocus="onHoverDiag()" onblur="onBlurDiag()">
                         </form>
-						<input onclick="genInvoice()" type="submit" style="width: 10.4em; margin-top:2%; margin-left:8%;" value="Generate Invoice">
+						<input onclick="genContract()" type="submit" style="width: 10.4em; margin-top:2%; margin-left:8%;" value="Generate Contract">
                     </td>                  
                 </tr>
             </table>
@@ -135,10 +134,10 @@ function callInvoice()
                             <input type="button" id="dialog" style="width: 10.4em; margin-top: 2%; margin-left: 8%;"   value="Confirm Vaccinations" >
                             
                         </form>
-                        <form method="get" action="invoice.html">
-                            <input type="submit" style="margin-left: 8%; width: 10.4em; margin-top: 2%;" onclick="callInvoice()" value="Generate Invoice">
+                        
+                            <input type="button" style="margin-left: 8%; width: 10.4em; margin-top: 2%;" onclick="genInvoice()" value="Generate Invoice">
             
-                        </form>
+                       
                     </td>                  
                 </tr>
             </table>

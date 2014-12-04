@@ -19,6 +19,11 @@ function genInvoice()
 	window.location = "";
 }
 
+function genContract()
+{
+
+}
+
 function checkDeleteRes()
 {
     if(confirm("Are you sure you want to Delete this Reservation?"))
@@ -133,7 +138,7 @@ function onMouseOutDialog()
                             <button style="width: 5em;" onclick="editCustomerEmp()">Edit</button>
                         
                         <input type="submit" style="width: 10.4em; margin-top:2%; " value="Confirm Vaccinations">
-						<input onclick="" type="submit" style="width: 10.4em; margin-top:2%; " value="Generate Invoice">
+						<input onclick="" type="submit" style="width: 10.4em; margin-top:2%; " value="Generate Contract">
                     </td>
                 </tr>
                 <tr>
@@ -155,7 +160,7 @@ function onMouseOutDialog()
                         <form method="post" action="customer-editPetInfo_jennyJonston_billy.html">
                             <input style="width: 10.4em; margin-top:2%; " type="submit" onmouseover="onClickDialog()" onmouseout="onMouseOutDialog()" id="vaccinations" value="Confirm Vaccinations">
                         </form>
-						<input onclick="genInvoice()" type="submit" style="width: 10.4em; margin-top:2%; " value="Generate Invoice">
+						<input onclick="genContract()" type="submit" style="width: 10.4em; margin-top:2%; " value="Generate Contract">
 
                     </td>                  
                 </tr>
@@ -187,7 +192,7 @@ function onMouseOutDialog()
                             <input style="width: 10.4em; margin-top: 2%; margin-left: 8%;" type="button" value="Confirm Vaccinations" onfocus="onHoverDiag()" onblur="onBlurDiag()">
                         </form>
                                                 <form method="get" action="invoice.html">
-                            <input type="submit" style="margin-left: 8%; width: 10.4em; margin-top: 2%;" onclick="callInvoice()" value="Generate Invoice">
+                            <input type="submit" style="margin-left: 8%; width: 10.4em; margin-top: 2%;" onclick="genInvoice()" value="Generate Invoice">
             
                         </form>
                     </td>                  
