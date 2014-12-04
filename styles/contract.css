@@ -29,7 +29,11 @@ body{
 .password{
 	margin-bottom:0.5em;
 }
-
+img.displayed {
+	width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
 img{
 	margin-left:2em;
 }

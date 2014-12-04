@@ -14,7 +14,12 @@ body{
 #reservations{
 	margin-right:1.5em;
 }
-
+img.displayed {
+	width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
+	
 #dogImg{
 	margin-left:-0.05em;
 	margin-top:0.5em;

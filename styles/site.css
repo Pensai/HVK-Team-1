@@ -6,7 +6,11 @@ body{
 #employeeForm{
 	float:right;
 }
-
+img.displayed {
+	width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
 #login{
 	width:30em;
 	min-height:10em;
