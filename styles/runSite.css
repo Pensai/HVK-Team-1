@@ -25,15 +25,12 @@ body{
 	margin-bottom:0.4em;
 	font-weight:bold;
 }
-#banner {
-	width: 65em;
-	margin-left:auto;
-	margin-right:auto;
-}
-#bannerPic{
-		margin-left:auto;
-	margin-right:auto;
-}
+
+img.displayed {
+	width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
 .password{
 	margin-bottom:0.5em;
 }
