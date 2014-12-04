@@ -96,18 +96,17 @@
                         <input onclick="enableDisable('#groomNum')" type="checkbox" />
                         <input type="number" id="groomNum" disabled  style="width:2em;"/> | $2.00/session: small dog<br/>
 
+                        <label class="chbx" style="margin-top:0.5em">Playtime</label>
+                        <input type="checkbox" onclick="enableDisable('#playNum')"/>
+                        <input type="number" disabled id="playNum" style="width:2em;"/> | $2.00/day<br/>
+
+                        <label class="chbx">2nd Feeding:</label>
+                        <input checked type="checkbox"/><br/>
+
                         <label class="chbx" style="margin-top:1em">Medication</label>
                         <input type="checkbox" checked onclick="enableDisable('#medNum'); enableDisable('#notes')"/>
                         <input type="number" id="medNum" value="2" style="width:2em;"/> | $1.00/day<br/>
                         <textarea style="width: 275px; height:44px; margin-top:0.5em;margin-left:10.3em" rows="1" id="notes" placeholder="Name(s), dosage, and additional notes." >Apomorphine, twice a day, directly after meals.</textarea><br/>
-
-                        <label class="chbx">2nd Feeding:</label>
-                        <input checked type="checkbox"/>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $2.00/session: small dog<br/>
-
-                        <label class="chbx" style="margin-top:0.5em">Playtime</label>
-                        <input type="checkbox" onclick="enableDisable('#playNum')"/>
-                        <input type="number" disabled id="playNum" style="width:2em;"/> | $2.00/day<br/>
                     </p>
                 </div>
                 <br/>
